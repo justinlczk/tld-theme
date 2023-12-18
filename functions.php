@@ -34,7 +34,7 @@ function afficher_page_configuration_theme() {
     <?php
 }
 
-function afficher_champ_logo() {
+function ajouter_page_configuration_theme() {
     $logo_image = get_option('logo_image');
     ?>
     <input type="hidden" id="logo_image" name="logo_image" value="<?php echo esc_attr($logo_image); ?>" />
@@ -67,9 +67,8 @@ function afficher_champ_logo() {
     <?php
 }
 
-add_action('admin_menu', 'ajouter_page_configuration_theme');
 
-function ajouter_page_configuration_theme() {
+function ajouter_page_configuration_theme_menu() {
     add_menu_page(
         'Configuration du thème',   // Titre de la page
         'Configuration du thème',   // Texte du menu
@@ -81,3 +80,9 @@ function ajouter_page_configuration_theme() {
     add_settings_field('logo_image', 'Logo du site', 'afficher_champ_logo', 'logo_theme', 'logo_theme');
 }
 
+function ajouter_page_configuration_theme_settings() {
+    add_settings_field('logo_image', 'Logo du site', 'afficher_champ_logo', 'logo_theme', 'logo_theme');
+}
+
+add_action('admin_menu', 'ajouter_page_configuration_theme_menu');
+add_action('admin_menu', 'ajouter_page_configuration_theme_settings');
