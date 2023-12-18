@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a5478a8-8ae2-4bd2-bda7-e631a0dafe0f" name="Changes" comment="Add scss compatibility">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inc/inc.vite.php" beforeDir="false" afterPath="$PROJECT_DIR$/inc/inc.vite.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702930568849</updated>
-      <workItem from="1702930571415" duration="7539000" />
+      <workItem from="1702930571415" duration="7589000" />
     </task>
     <task id="LOCAL-00001" summary="Add scss compatibility">
       <created>1702938275490</created>

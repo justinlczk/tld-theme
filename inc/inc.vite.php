@@ -50,7 +50,6 @@ add_action( 'wp_enqueue_scripts', function() {
             // get first key, by default is 'main.js' but it can change
             $manifest_key = array_keys($manifest);
             if (isset($manifest_key[1])) {
-                var_dump($manifest_key);
                 
                 // enqueue CSS files
                 foreach(@$manifest[$manifest_key[1]]['css'] as $css_file) {
