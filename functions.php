@@ -19,21 +19,6 @@ function enregistrer_parametres_logo() {
 }
 add_action('admin_init', 'enregistrer_parametres_logo');
 
-function afficher_page_configuration_theme() {
-    ?>
-    <div class="wrap">
-        <h2>Configuration du thème</h2>
-        <form method="post" action="options.php">
-            <?php
-            settings_fields('logo_theme');
-            do_settings_sections('logo_theme');
-            submit_button();
-            ?>
-        </form>
-    </div>
-    <?php
-}
-
 function ajouter_page_configuration_theme() {
     $logo_image = get_option('logo_image');
     ?>
@@ -64,6 +49,24 @@ function ajouter_page_configuration_theme() {
             });
         });
     </script>
+    <?php
+}
+
+
+
+function afficher_page_configuration_theme() {
+    ?>
+    <div class="wrap">
+        <h2>Configuration du thème</h2>
+        <form method="post" action="options.php">
+            <?php
+            settings_fields('logo_theme');
+            do_settings_sections('logo_theme');
+            ajouter_page_configuration_theme();
+            submit_button();
+            ?>
+        </form>
+    </div>
     <?php
 }
 
