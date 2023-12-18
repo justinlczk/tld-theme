@@ -56,7 +56,7 @@ export default defineConfig({
     },
 
     // minifying switch
-    minify: true,
+    minify: false,
     write: true
   },
 
