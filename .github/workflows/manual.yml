@@ -1,0 +1,17 @@
+name: Deploy on Main Push
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Webhook Request
+        env:
+          WEBHOOK_URL: https://webhooks.hostinger.com/deploy/9c5501f417fc6336d04d8c80a0b87ad5
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"event": "main_push"}' $WEBHOOK_URL
