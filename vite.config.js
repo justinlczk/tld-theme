@@ -40,6 +40,7 @@ export default defineConfig({
 
     // esbuild target
     target: 'es2018',
+    watch: true,
 
     // our entry
     rollupOptions: {
