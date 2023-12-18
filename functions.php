@@ -14,17 +14,10 @@ define('IS_VITE_DEVELOPMENT', true);
 
 include "inc/inc.vite.php";
 
-function ajouter_page_configuration_theme() {
-    add_menu_page(
-        'Configuration du thème',   // Titre de la page
-        'Configuration du thème',   // Texte du menu
-        'manage_options',           // Capacité requise pour accéder à la page
-        'configuration-theme',      // Slug de la page
-        'afficher_page_configuration_theme', // Fonction pour afficher la page
-        'dashicons-admin-generic'   // Icône du menu (facultatif)
-    );
+function enregistrer_parametres_logo() {
+    register_setting('logo_theme', 'logo_image');
 }
-add_action('admin_menu', 'ajouter_page_configuration_theme');
+add_action('admin_init', 'enregistrer_parametres_logo');
 
 function afficher_page_configuration_theme() {
     ?>
@@ -40,11 +33,6 @@ function afficher_page_configuration_theme() {
     </div>
     <?php
 }
-
-function enregistrer_parametres_logo() {
-    register_setting('logo_theme', 'logo_image');
-}
-add_action('admin_init', 'enregistrer_parametres_logo');
 
 function afficher_champ_logo() {
     $logo_image = get_option('logo_image');
@@ -78,5 +66,18 @@ function afficher_champ_logo() {
     </script>
     <?php
 }
-add_settings_field('logo_image', 'Logo du site', 'afficher_champ_logo', 'logo_theme');
+
+add_action('admin_menu', 'ajouter_page_configuration_theme');
+
+function ajouter_page_configuration_theme() {
+    add_menu_page(
+        'Configuration du thème',   // Titre de la page
+        'Configuration du thème',   // Texte du menu
+        'manage_options',           // Capacité requise pour accéder à la page
+        'configuration-theme',      // Slug de la page
+        'afficher_page_configuration_theme' // Fonction pour afficher la page
+    );
+
+    add_settings_field('logo_image', 'Logo du site', 'afficher_champ_logo', 'logo_theme', 'logo_theme');
+}
 
