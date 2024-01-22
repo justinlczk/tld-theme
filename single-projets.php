@@ -117,8 +117,7 @@ if (get_field("brochure_active")) :
             </div>
 
             <div class="w-full">
-                <img class="w-full" src="<?= get_field("image_brochure")["url"] ?>"
-                     alt="<?= get_field("image_brochure")["alt"] ?>">
+                <?= do_shortcode(get_field("sortcode_pdf")) ?>
             </div>
 
             <div class="flex items-center justify-center">
