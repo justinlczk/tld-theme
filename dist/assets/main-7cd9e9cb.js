@@ -4855,7 +4855,22 @@ const swiper = "";
 const pagination = "";
 const styles = "";
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("js executed...");
+  let words = document.querySelectorAll(".homepage_title word");
+  let tlWords = gsap.timeline({
+    repeat: -1,
+    duration: 1e3,
+    delay: 2e3,
+    stagger: 2500
+  });
+  tlWords.from(words, {
+    translateY: "100%"
+  });
+  tlWords.to(words, {
+    translateY: "0%"
+  });
+  tlWords.to(words, {
+    translateY: "-100%"
+  });
 });
 document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((title) => {
   if (title.textContent.includes(".")) {

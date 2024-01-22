@@ -115,11 +115,19 @@ footer {
 }
 
 .homepage_title {
+  .container-words {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
   span {
-    display: none;
-
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     &.active {
-      display: inline;
     }
   }
 }

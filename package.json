@@ -17,6 +17,7 @@
     "vite-plugin-live-reload": "^3.0.2"
   },
   "dependencies": {
+    "gsap": "npm:@gsap/shockingly@^3.12.5",
     "swiper": "^11.0.5"
   }
 }

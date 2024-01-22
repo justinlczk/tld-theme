@@ -24,6 +24,8 @@ get_header(); ?>
             ?>
 
             <h1 class="sm:text-6xl text-4xl font-extrabold pb-6 uppercase homepage_title">
+                <?= $end_hero ?>
+                <span class="container-words">
                 <?php
                 foreach ($array_hero as $key => $value_word) {
                     if ($key === 0) {
@@ -32,7 +34,8 @@ get_header(); ?>
                         echo "<span class='word'>$value_word</span>";
                     }
                 }
-                ?> <?= $end_hero ?>
+                ?>
+                    </span>
             </h1>
 
             <div class="text-2xl font-extrabold pb-4 uppercase">
@@ -220,10 +223,9 @@ get_header(); ?>
     </div>
 
 
-
 </section>
 
-<section class="container mx-auto px-4 sm:px-0">
+<section class="container mx-auto px-4 sm:px-0 pt-6 sm:pt-12">
     <div class="grid grid-cols-12 gap-4">
         <div class="hidden col-span-1"></div>
         <div class="hidden col-span-2"></div>

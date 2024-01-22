@@ -1411,6 +1411,9 @@ html {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+.pb-12{
+  padding-bottom: 3rem;
+}
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -1423,8 +1426,8 @@ html {
 .pt-16{
   padding-top: 4rem;
 }
-.pb-12{
-  padding-bottom: 3rem;
+.pt-6{
+  padding-top: 1.5rem;
 }
 .text-left{
   text-align: left;
@@ -1599,11 +1602,18 @@ footer .menu-menu-container ul li span {
 .menu-menu-footer-container ul li:not(:last-of-type) {
   border-right: solid #fff 1px;
 }
-.homepage_title span {
-  display: none;
+.homepage_title .container-words {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
 }
-.homepage_title span.active {
-  display: inline;
+.homepage_title span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .wpcf7-form {
   background: rgba(255, 255, 255, 0.8);
@@ -1979,6 +1989,9 @@ footer .menu-menu-container ul li span {
   }
   .sm\:pb-12{
     padding-bottom: 3rem;
+  }
+  .sm\:pt-12{
+    padding-top: 3rem;
   }
   .sm\:pt-16{
     padding-top: 4rem;
