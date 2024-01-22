@@ -56,6 +56,8 @@ get_header(); ?>
             <?php
 
             $images_slider_hero = get_field("background_hero");
+            $count_images_slider_hero = count($images_slider_hero);
+            var_dump($count_images_slider_hero);
 
 
             foreach ($images_slider_hero as $index_image_slider_hero => $image_slider_hero) {
@@ -69,7 +71,8 @@ get_header(); ?>
 
             <div class="absolute flex flex-col top-1/2 -translate-y-1/2 right-4">
                 <?php
-                for($i = 0; $i++; $i < count($images_slider_hero)) {
+                for($i = 0; $i++; $i < $count_images_slider_hero) {
+                    var_dump($i);
                     ?>
                 <div class="w-4 h-4 rounded-full bg-[#E5E5E5]"></div>
                 <?php
