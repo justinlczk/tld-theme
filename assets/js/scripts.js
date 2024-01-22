@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let tl = gsap.timeline({
             delay: (index + 1) * 2, // Décalage pour chaque élément
             repeat: -1,
-            repeatDelay: words.length,
+            repeatDelay: words.length + 1,
             onComplete: () => {
                 if (index < words.length - 1) {
                     //tl.reverse(); // Inverse l'animation après son achèvement
