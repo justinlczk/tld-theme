@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     words.forEach((word, index) => {
         let tl = gsap.timeline({
-            delay: index * 2, // Décalage pour chaque élément
+            delay: (index + 1) * 2, // Décalage pour chaque élément
             repeat: -1,
-            repeatDelay: words.length * 2 - 4,
+            repeatDelay: words.length * 2,
             onComplete: () => {
                 if (index < words.length - 1) {
                     //tl.reverse(); // Inverse l'animation après son achèvement
