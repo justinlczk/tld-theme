@@ -1,3 +1,5 @@
+import {gsap} from "gsap";
+
 document.addEventListener("DOMContentLoaded", function(){
 
   let words = document.querySelectorAll(".homepage_title word")
