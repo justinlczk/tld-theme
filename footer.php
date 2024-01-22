@@ -1,10 +1,121 @@
-    </main>
+</main>
 
-    <footer class="flex-0 bg-slate-100 px-4 py-2">
-        <div class="container mx-auto text-center">
-            <p class="text-xs">Currently in <strong><?php echo (IS_VITE_DEVELOPMENT) ? "development" : "production" ?></strong> mode.</p>
+<footer class="flex-0 bg-transparent">
+    <div class="container mx-auto bg-primary text-white px-14 rounded-t-3xl">
+        <div class="grid grid-cols-2 gap-y-4 sm:gap-y-0 sm:grid-cols-[1fr,2fr,1fr] py-6">
+            <p class="order-1 uppercase font-semibold"><?= get_option("text_footer") ?></p>
+
+
+            <?php
+            if (has_nav_menu('header-menu')) {
+                wp_nav_menu(array(
+                    'theme_location' => 'header-menu',
+                    'menu_class' => 'header-menu-class', // Ajoutez votre classe personnalisée ici
+                    'container_class' => 'order-3 sm:order-2 menu-menu-container col-span-2'
+                ));
+            }
+            ?>
+
+            <div class="order-2 sm:order-3 socials flex gap-6 justify-end items-center">
+
+                <?php
+
+                if (get_option("facebook_contact")) {
+                    ?>
+                    <a href="<?= esc_url(get_option("facebook_contact")) ?>">
+                        <svg class="w-6" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="fi_1051309"><path fill="#fff" d="m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h151v-181h-60v-90h60v-61c0-49.628906 40.371094-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm0 0"></path></svg>
+                    </a>
+                    <?php
+                }
+
+
+                if (get_option("instagram_contact")) {
+                    ?>
+                    <a href="<?= esc_url(get_option("instagram_contact")) ?>">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <g clip-path="url(#clip0_440_55)">
+                                <path d="M17.3952 4.07129C17.1007 4.07129 16.8611 4.31093 16.8611 4.60539C16.8611 4.89986 17.1007 5.13949 17.3952 5.13949C17.6897 5.13949 17.9293 4.8999 17.9293 4.60539C17.9293 4.31088 17.6897 4.07129 17.3952 4.07129Z" fill="white"/>
+                                <path d="M11.0001 6.26465C8.38925 6.26465 6.26514 8.38877 6.26514 10.9996C6.26514 13.6105 8.38925 15.7347 11.0001 15.7347C13.611 15.7347 15.7351 13.6105 15.7351 10.9997C15.7351 8.38881 13.611 6.26465 11.0001 6.26465Z" fill="white"/>
+                                <path d="M15.969 0H6.03096C2.70548 0 0 2.70548 0 6.03101V15.969C0 19.2946 2.70548 22 6.03096 22H15.969C19.2946 22 22 19.2945 22 15.969V6.03101C22 2.70548 19.2946 0 15.969 0ZM11 17.0342C7.67272 17.0342 4.96586 14.3273 4.96586 11C4.96586 7.67272 7.67276 4.9659 11 4.9659C14.3272 4.9659 17.0342 7.67276 17.0342 11C17.0342 14.3272 14.3272 17.0342 11 17.0342ZM17.3951 6.43827C16.3842 6.43827 15.5618 5.61584 15.5618 4.60496C15.5618 3.59408 16.3842 2.77161 17.3951 2.77161C18.406 2.77161 19.2284 3.59404 19.2284 4.60492C19.2284 5.6158 18.406 6.43827 17.3951 6.43827Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_440_55">
+                                    <rect width="22" height="22" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <?php
+                }
+
+
+                if (get_option("linkedin_contact")) {
+                    ?>
+                    <a href="<?= esc_url(get_option("linkedin_contact")) ?>">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <g clip-path="url(#clip0_440_65)">
+                                <path d="M19.8 0H2.2C0.99 0 0 0.99 0 2.2V19.8C0 21.01 0.99 22 2.2 22H19.8C21.01 22 22 21.01 22 19.8V2.2C22 0.99 21.01 0 19.8 0ZM6.6 18.7H3.3V8.8H6.6V18.7ZM4.95 6.93C3.85 6.93 2.97 6.05 2.97 4.95C2.97 3.85 3.85 2.97 4.95 2.97C6.05 2.97 6.93 3.85 6.93 4.95C6.93 6.05 6.05 6.93 4.95 6.93ZM18.7 18.7H15.4V12.87C15.4 11.99 14.63 11.22 13.75 11.22C12.87 11.22 12.1 11.99 12.1 12.87V18.7H8.8V8.8H12.1V10.12C12.65 9.24 13.86 8.58 14.85 8.58C16.94 8.58 18.7 10.34 18.7 12.43V18.7Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_440_65">
+                                    <rect width="22" height="22" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <?php
+                }
+
+
+                if (get_option("behance_contact")) {
+                    ?>
+                    <a href="<?= esc_url(get_option("behance_contact")) ?>">
+                        <svg class="w-6" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                            <g clip-path="url(#clip0_440_69)">
+                                <path d="M7.88761 10.0916H5.98511V8.15534H7.88761C7.88761 8.15534 9.01261 8.12909 9.01261 9.12409C9.01261 10.1191 7.88761 10.0916 7.88761 10.0916Z" fill="white"/>
+                                <path d="M9.34386 12.5571C9.34386 13.7434 8.00386 13.7134 8.00386 13.7134H5.98511V11.4034H8.00011C8.00011 11.4034 9.34386 11.3746 9.34386 12.5571Z" fill="white"/>
+                                <path d="M14.7875 10.1088C14.1013 10.1088 13.5375 10.6225 13.425 11.4275H16.15C16.0425 10.625 15.4725 10.1088 14.7875 10.1088ZM14.7875 10.1088C14.1013 10.1088 13.5375 10.6225 13.425 11.4275H16.15C16.0425 10.625 15.4725 10.1088 14.7875 10.1088ZM19 0H3C2.20435 0 1.44129 0.31607 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 19C0 19.7956 0.31607 20.5587 0.87868 21.1213C1.44129 21.6839 2.20435 22 3 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V3C22 2.20435 21.6839 1.44129 21.1213 0.87868C20.5587 0.31607 19.7956 0 19 0ZM13.0575 7.25H16.5V8.1075H13.0575V7.25ZM9.77375 14.8413C9.3 15.075 8.705 15.1488 8.14875 15.1488H4.125V6.6975H8.54875C9.09625 6.6975 10.7913 7.02375 10.7987 8.6525C10.7987 9.7775 10.1737 10.2925 9.635 10.54C9.635 10.54 11.04 10.9575 11.1525 12.2C11.265 13.4425 11.0425 14.215 9.77375 14.8413ZM17.8563 12.51H13.425C13.3825 13.4862 14.0963 14.0688 14.9075 14.0688C15.1898 14.0694 15.4669 13.9931 15.7091 13.8482C15.9513 13.7033 16.1495 13.4952 16.2825 13.2463H17.7337C17.335 14.6988 16.1663 15.3038 14.785 15.3038C12.9762 15.3038 11.69 13.8538 11.69 12.0638C11.69 10.2738 13.0763 8.8225 14.785 8.8225C16.4937 8.8225 17.875 10.2738 17.875 12.0638C17.875 12.2188 17.875 12.3663 17.8563 12.51ZM14.7875 10.1088C14.1013 10.1088 13.5375 10.6225 13.425 11.4275H16.15C16.0425 10.625 15.4725 10.1088 14.7875 10.1088Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_440_69">
+                                    <rect width="22" height="22" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <?php
+                }
+
+
+                if (get_option("x_contact")) {
+                    ?>
+                    <a href="<?= esc_url(get_option("x_contact")) ?>">
+                        <svg class="w-6" viewBox="0 0 1227 1227" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="m654.53 592.55 276.12 394.95h-113.32l-225.32-322.28v-.02l-33.08-47.31-263.21-376.5h113.32l212.41 303.85z"></path><path fill="#fff" d="m1094.42 0h-961.84c-73.22 0-132.58 59.36-132.58 132.58v961.84c0 73.22 59.36 132.58 132.58 132.58h961.84c73.22 0 132.58-59.36 132.58-132.58v-961.84c0-73.22-59.36-132.58-132.58-132.58zm-311.8 1040.52-228.01-331.84-285.47 331.84h-73.78l326.49-379.5-326.49-475.17h249.02l215.91 314.23 270.32-314.23h73.78l-311.33 361.9h-.02l338.6 492.77z"></path></svg>
+                    </a>
+                    <?php
+                }
+
+                ?>
+
+            </div>
         </div>
-    </footer>
+
+        <div class="h-px w-full bg-white"></div>
+
+        <div class="py-6">
+            <?php
+            if (has_nav_menu('footer-menu')) {
+                wp_nav_menu(array(
+                    'theme_location' => 'footer-menu',
+                    'menu_class' => 'footer-menu-class', // Ajoutez votre classe personnalisée ici
+                    // Autres paramètres selon vos besoins
+                ));
+            }
+            ?>
+        </div>
+
+    </div>
+</footer>
 
 <?php wp_footer() ?>
 </body>

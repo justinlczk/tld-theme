@@ -11,6 +11,7 @@
 */
 
 @import "tailwindcss/utilities";
+
 /*
  * uncomment if adding custom utilities
 @import "./custom-utilities.css";
@@ -19,5 +20,242 @@
 
 /* admin bar fix */
 body.admin-bar {
-    max-height: calc(100vh - 32px);
+  max-height: calc(100vh - 32px);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+@layer base {
+  html {
+    font-family: "Mulish", system-ui, sans-serif;
+  }
+}
+
+:root {
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-pagination-color: #EB5939;
+  --primary: #EB5939;
+  //--swiper-pagination-bullet-inactive-color: #D9D9D9;
+}
+
+.menu-menu-container {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 12px;
+    
+
+
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &.header-menu-class-mobile {
+        align-items: center;
+      }
+    }
+
+
+
+    sup {
+      text-transform: none;
+    }
+  }
+}
+
+footer {
+  .menu-menu-container {
+    ul li span {
+      color: #fff !important;
+    }
+  }
+}
+
+.menu-menu-footer-container {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-size: 12px;
+
+    @media screen and (max-width: 640px) {
+      justify-content: flex-start;
+    }
+
+    sup {
+      text-transform: none;
+    }
+    li {
+      padding: 0 12px;
+
+      @media screen and (max-width: 640px) {
+        font-size: 8px;
+      &:first-of-type {
+        padding-left: 0;
+      }
+      }
+
+      &:not(:last-of-type) {
+        border-right: solid #fff 1px;
+      }
+    }
+  }
+}
+
+.homepage_title {
+  span {
+    display: none;
+
+    &.active {
+      display: inline;
+    }
+  }
+}
+
+.wpcf7-form {
+  background: rgba(255, 255, 255, 0.80);
+  backdrop-filter: blur(2.5px);
+  width: 100%;
+  padding: 2rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: none;
+  }
+
+  input:not([type="submit"]), textarea {
+    margin-bottom: 1rem;
+    border-bottom: solid 1px #000;
+    color: #000;
+    background: transparent;
+    width: 100%;
+    padding-bottom: .33rem;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: #EB5939;
+      border-bottom-width: 2px;
+    }
+
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  .submit-ctn {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 2rem auto 0 auto;
+    z-index: 2;
+    &:after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #EB5939;
+      filter: blur(2px);
+      border-radius: 999rem;
+      z-index: 1;
+    }
+
+    input[type="submit"] {
+      color: #fff;
+      display: block;
+      padding: .5rem 1.5rem;
+      border-radius: 999rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .wpcf7-spinner {
+      position: absolute;
+    }
+  }
+}
+
+.return-text {
+  position: relative;
+
+  p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin: left top;
+    transform: rotate(-90deg) translateX(-100%);
+    width: fit-content;
+    white-space: nowrap;
+    letter-spacing: 3.45px;
+  }
+
+}
+
+.swiper-pagination {
+  position: static;
+
+  &.swiper-pagination-fraction {
+    text-align: right;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+
+    .separator-fraction {
+      width: 1px;
+      height: 45px;
+      background: #EC5A3A;
+      display: inline-block;
+    }
+  }
+}
+
+
+
+.selector-type {
+  color: rgba(0, 0, 0, 0.44);
+  &.active {
+    color: #000;
+  }
+}
+
+.slider-projects-home {
+  .swiper-slide {
+    transition: transform .2s ease-in;
+
+    p, h3 {
+      display: none;
+    }
+
+    &.swiper-slide-active {
+      p, h3 {
+        display: block;
+      }
+    }
+  }
 }
