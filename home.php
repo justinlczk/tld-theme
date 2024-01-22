@@ -53,8 +53,18 @@ get_header(); ?>
 
         </div>
         <div class="w-3/4 h-1/3 sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-1/2 -translate-y-1/2 z-10">
-            <img class="object-cover min-h-full min-w-full" src="<?= get_field("background_hero")["url"] ?>"
-                 alt="<?= get_field("background_hero")["alt"] ?>">
+            <?php
+
+            $images_slider_hero = get_field("background_hero");
+
+            foreach ($images_slider_hero as $index_image_slider_hero => $image_slider_hero) {
+                ?>
+                <img class="<?= $index_image_slider_hero === 0 ? "active" : "hidden" ?> object-cover min-h-full min-w-full" src="<?= $image_slider_hero["url"] ?>"
+                     alt="<?= $image_slider_hero["alt"] ?>">
+            <?php
+            }
+
+            ?>
         </div>
     </div>
     <svg class="w-24 h-24 absolute bottom-4 sm:bottom-10 left-4 sm:left-10" xmlns="http://www.w3.org/2000/svg"
