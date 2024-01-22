@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   let tlWords = gsap.timeline({
     repeat: -1, // Répéter indéfiniment
-    delay: 0.5, // Délai avant de commencer l'animation
+    delay: "+=2000ms", // Délai avant de commencer l'animation
   });
 
   tlWords.from(words, {
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
   tlWords.to(words, {
+    delay: 2000,
     duration: 0.1,
     translateY: "-100%", // Déplace chaque mot en haut
     stagger: 0.2,
