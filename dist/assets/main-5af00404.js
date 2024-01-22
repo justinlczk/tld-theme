@@ -8871,7 +8871,7 @@ gsap.registerPlugin(CSSPlugin);
 var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap;
 gsapWithCSS.core.Tween;
 document.addEventListener("DOMContentLoaded", function() {
-  let words = document.querySelectorAll(".homepage_title word");
+  let words = document.querySelectorAll(".homepage_title .word");
   let tlWords = gsapWithCSS.timeline({
     repeat: -1,
     duration: 1e3,
