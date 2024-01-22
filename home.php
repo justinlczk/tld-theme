@@ -276,7 +276,7 @@ get_header(); ?>
 
 
                             ?>
-                            <div class="<?= $count == 2 ? "sm:justify-self-center " : "" ?><?= $count == 3 ? "sm:justify-self-end " : "" ?><?= $ability_index % 2 == 0 ? "" : "justify-self-end " ?>flex w-32 items-center justify-center gap-2 flex-col">
+                            <div class="<?= $count == 1 ? "sm:justify-self-start " : "" ?><?= $count == 2 ? "sm:justify-self-center " : "" ?><?= $count == 3 ? "sm:justify-self-end " : "" ?><?= $ability_index % 2 == 0 ? "justify-self-start " : "justify-self-end " ?>flex w-32 items-center justify-center gap-2 flex-col">
                                 <div class="bg-[#D9D9D9] p-8 rounded-full">
                                     <img class="w-8" src="<?= $ability["image"]["url"] ?>"
                                          alt="<?= $ability["image"]["alt"] ?>">
