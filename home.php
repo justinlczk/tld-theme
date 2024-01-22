@@ -179,7 +179,7 @@ get_header(); ?>
     </div>
 
 
-    <div class="w-full h-[50svh] sm:h-[75svh] flex flex-col gap-12 items-center justify-center">
+    <div class="w-full h-[50svh] sm:h-[75svh] flex items-center justify-center">
 
         <?php
         $projets_slider_home = get_field("projets_slider");
@@ -210,11 +210,13 @@ get_header(); ?>
             </div>
         </div>
 
-        <div class="flex items-center justify-center">
-            <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
-               href="<?= site_url() ?>/projets"><span
-                        class="relative z-10">Tous les projets</span></a>
-        </div>
+
+    </div>
+
+    <div class="flex items-center justify-center pb-12">
+        <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
+           href="<?= site_url() ?>/projets"><span
+                    class="relative z-10">Tous les projets</span></a>
     </div>
 
 

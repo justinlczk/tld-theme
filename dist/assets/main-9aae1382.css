@@ -1423,6 +1423,9 @@ html {
 .pt-16{
   padding-top: 4rem;
 }
+.pb-12{
+  padding-bottom: 3rem;
+}
 .text-left{
   text-align: left;
 }
