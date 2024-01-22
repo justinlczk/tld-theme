@@ -23,7 +23,7 @@ get_header(); ?>
             }
             ?>
 
-            <h1 class="sm:text-6xl flex gap-2 text-4xl font-extrabold pb-6 uppercase homepage_title">
+            <h1 class="sm:text-6xl flex text-4xl font-extrabold pb-6 uppercase homepage_title">
                 <span class="start-title"><?= $end_hero ?></span>
                 <span class="start-title-space">&nbsp;</span>
                 <span class="container-words">

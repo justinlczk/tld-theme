@@ -1,26 +1,30 @@
-import {gsap} from "gsap";
+import { gsap } from "gsap";
 
 document.addEventListener("DOMContentLoaded", function(){
 
-  let words = document.querySelectorAll(".homepage_title .word")
+  let words = document.querySelectorAll(".homepage_title .word");
 
   let tlWords = gsap.timeline({
-    repeat: -1,
-    duration: 1000,
-    delay: 2000,
-    stagger: 2500,
-  })
+    repeat: -1, // Répéter indéfiniment
+    delay: 0.5, // Délai avant de commencer l'animation
+  });
 
   tlWords.from(words, {
-    translateY: "100%"
-  })
+    duration: 0.1, // Durée de l'animation pour chaque mot (100ms)
+    translateY: "100%", // Commence en bas
+    stagger: 0.2, // Délai entre chaque mot
+  });
 
   tlWords.to(words, {
-    translateY: "0%"
-  })
+    duration: 0.1,
+    translateY: "0%", // Déplace chaque mot à sa position initiale
+    stagger: 0.2,
+  });
 
   tlWords.to(words, {
-    translateY: "-100%"
-  })
+    duration: 0.1,
+    translateY: "-100%", // Déplace chaque mot en haut
+    stagger: 0.2,
+  });
 
 });
