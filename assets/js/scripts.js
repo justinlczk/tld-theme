@@ -35,3 +35,5 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 });
+
+let imagesSliderHero = document.querySelectorAll(".image-slider-hero");

@@ -8901,6 +8901,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }, "+=1");
   });
 });
+document.querySelectorAll(".image-slider-hero");
 document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((title) => {
   if (title.textContent.includes(".")) {
     title.innerHTML = title.textContent.replace(/\./, (match) => `<span class="text-primary">${match}</span>`);

@@ -1082,6 +1082,9 @@ html {
 .h-svh{
   height: 100svh;
 }
+.h-4{
+  height: 1rem;
+}
 .max-h-\[50vh\]{
   max-height: 50vh;
 }
