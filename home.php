@@ -169,7 +169,7 @@ get_header(); ?>
     </div>
 </section>
 <section class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["url"] ?>)">
-    <div class="container px-4 sm:px-0 mx-auto pt-12">
+    <div class="container px-4 sm:px-0 mx-auto py-12">
         <h2 class="text-3xl sm:text-6xl font-extrabold pb-6">
             <?= get_field("titre_projets") ?>
         </h2>
@@ -208,6 +208,12 @@ get_header(); ?>
                 }
                 ?>
             </div>
+        </div>
+
+        <div>
+            <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
+               href="<?= site_url() ?>/projets"><span
+                        class="relative z-10">Tous les projets</span></a>
         </div>
 
     </div>
