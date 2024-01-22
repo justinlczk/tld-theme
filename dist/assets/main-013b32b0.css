@@ -1196,6 +1196,9 @@ html {
 .grid-cols-\[64px\2c 1fr\]{
   grid-template-columns: 64px 1fr;
 }
+.flex-row{
+  flex-direction: row;
+}
 .flex-col{
   flex-direction: column;
 }
@@ -1912,6 +1915,9 @@ footer .menu-menu-container ul li span {
   }
   .sm\:grid-cols-\[64px\2c auto\]{
     grid-template-columns: 64px auto;
+  }
+  .sm\:flex-row{
+    flex-direction: row;
   }
   .sm\:justify-start{
     justify-content: flex-start;
