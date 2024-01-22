@@ -165,12 +165,16 @@ if (sliderProjectsHome) {
         if (currentActiveSlide) currentActiveSlide.style.zIndex = "5";
         if (allSlides[prevIndex]) allSlides[prevIndex].style.transform = 'translateY(-15%) translateX(5%) scale(.8)';
         if (allSlides[prevIndex]) allSlides[prevIndex].style.zIndex = '4';
+        if (allSlides[prevIndex]) allSlides[prevIndex].style.opacity = '.6';
         if (allSlides[nextIndex]) allSlides[nextIndex].style.transform = 'translateY(-15%) translateX(-5%) scale(.8)';
         if (allSlides[nextIndex]) allSlides[nextIndex].style.zIndex = '4';
+        if (allSlides[nextIndex]) allSlides[nextIndex].style.opacity = '.6';
         if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.transform = 'translateY(-30%) translateX(25%) scale(.6)';
         if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.zIndex = '3';
+        if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = '.8';
         if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.transform = 'translateY(-30%) translateX(-25%) scale(.6)';
         if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.zIndex = '3';
+        if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = '.8';
 
 
         allSlides.forEach((slide, index) => {
