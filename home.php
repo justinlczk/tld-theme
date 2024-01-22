@@ -179,7 +179,7 @@ get_header(); ?>
     </div>
 
 
-    <div class="w-full h-[50svh] sm:h-[75svh] flex items-center justify-center">
+    <div class="w-full h-[50svh] sm:h-[75svh] flex flex-col gap-12 items-center justify-center">
 
         <?php
         $projets_slider_home = get_field("projets_slider");
@@ -210,15 +210,14 @@ get_header(); ?>
             </div>
         </div>
 
-
-
+        <div class="flex items-center justify-center">
+            <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
+               href="<?= site_url() ?>/projets"><span
+                        class="relative z-10">Tous les projets</span></a>
+        </div>
     </div>
 
-    <div class="flex items-center justify-center">
-        <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
-           href="<?= site_url() ?>/projets"><span
-                    class="relative z-10">Tous les projets</span></a>
-    </div>
+
 
 </section>
 
@@ -384,8 +383,9 @@ get_header(); ?>
 </section>
 
 
-<section class="flex justify-center items-center bg-right-bottom sm:bg-right bg-[length:100%_auto] sm:bg-[length:auto_90%] bg-no-repeat sm:pt-16"
-         style="background-image: url(<?= get_field("background_contact")["url"] ?>);">
+<section
+        class="flex justify-center items-center bg-right-bottom sm:bg-right bg-[length:100%_auto] sm:bg-[length:auto_90%] bg-no-repeat sm:pt-16"
+        style="background-image: url(<?= get_field("background_contact")["url"] ?>);">
     <div class="container min-h-[66vh] grid sm:grid-cols-2 py-12 px-4 sm:px-0">
         <div class="">
             <h2 class="text-3xl sm:text-6xl font-extrabold mb-6 sm:mb-8"><?= get_field("titre_contact"); ?></h2>
