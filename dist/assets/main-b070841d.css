@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");/**
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");/**
  * Swiper 11.0.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
@@ -412,6 +412,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-lock {
   display: none;
 }
+
 
 /*
 ! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
@@ -1054,6 +1055,9 @@ html {
 .h-24{
   height: 6rem;
 }
+.h-4{
+  height: 1rem;
+}
 .h-5{
   height: 1.25rem;
 }
@@ -1081,9 +1085,6 @@ html {
 }
 .h-svh{
   height: 100svh;
-}
-.h-4{
-  height: 1rem;
 }
 .max-h-\[50vh\]{
   max-height: 50vh;
@@ -1195,9 +1196,6 @@ html {
 }
 .grid-cols-\[64px\2c 1fr\]{
   grid-template-columns: 64px 1fr;
-}
-.flex-row{
-  flex-direction: row;
 }
 .flex-col{
   flex-direction: column;
@@ -1335,9 +1333,6 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
-.bg-\[\]{
-  background-color: ;
-}
 .bg-\[length\:100\%_auto\]{
   background-size: 100% auto;
 }
@@ -1423,6 +1418,9 @@ html {
 .pb-12{
   padding-bottom: 3rem;
 }
+.pb-14{
+  padding-bottom: 3.5rem;
+}
 .pb-4{
   padding-bottom: 1rem;
 }
@@ -1437,9 +1435,6 @@ html {
 }
 .pt-6{
   padding-top: 1.5rem;
-}
-.pb-14{
-  padding-bottom: 3.5rem;
 }
 .text-left{
   text-align: left;
@@ -1562,7 +1557,7 @@ body.admin-bar {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 12px;
 }
 @media screen and (max-width: 640px) {
@@ -1589,7 +1584,7 @@ footer .menu-menu-container ul li span {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 12px;
 }
 @media screen and (max-width: 640px) {
@@ -1709,7 +1704,7 @@ footer .menu-menu-container ul li span {
 .swiper-pagination.swiper-pagination-fraction {
   text-align: right;
   color: #000;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -2004,14 +1999,14 @@ footer .menu-menu-container ul li span {
   .sm\:pb-12{
     padding-bottom: 3rem;
   }
+  .sm\:pb-6{
+    padding-bottom: 1.5rem;
+  }
   .sm\:pt-12{
     padding-top: 3rem;
   }
   .sm\:pt-16{
     padding-top: 4rem;
-  }
-  .sm\:pb-6{
-    padding-bottom: 1.5rem;
   }
   .sm\:text-3xl{
     font-size: 1.875rem;
