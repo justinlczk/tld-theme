@@ -73,7 +73,7 @@ if(imagesSliderHero.length > 1) {
 
         let nextItem = arrayItems[nextItemIndex];
 
-        nextItem.itemImage.classList.replace("active", "hidden")
+        nextItem.itemImage.classList.replace("hidden", "active")
         nextItem.dot.classList.replace("bg-[#E5E5E5]", "bg-primary")
         nextItem.dot.classList.add("active")
         nextItem.activated = true
