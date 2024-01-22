@@ -8920,23 +8920,27 @@ if (imagesSliderHero.length > 1) {
     if (nextItemIndex > arrayItems.length - 1) {
       nextItemIndex = 0;
     }
+    console.log("next item", nextItemIndex);
     let currentItem = arrayItems[currentIndex];
     currentItem.itemImage.classList.replace("active", "hidden");
     currentItem.dot.classList.replace("bg-primary", "bg-[#E5E5E5]");
     currentItem.dot.classList.remove("active");
+    currentItem.activated = false;
     let nextItem = arrayItems[nextItemIndex];
     nextItem.itemImage.classList.replace("active", "hidden");
     nextItem.dot.classList.replace("bg-[#E5E5E5]", "bg-primary");
     nextItem.dot.classList.add("active");
+    nextItem.activated = true;
   };
   let intervalAnimation = setInterval(changeItemActive, 5e3);
   dotsSliderHero.forEach((item, index) => {
     item.addEventListener("click", () => {
       clearInterval(intervalAnimation);
-      arrayItems.find((item2) => item2.activated === true).activated = false;
+      let oldItem = arrayItems.find((item2) => item2.activated === true);
+      oldItem.activated = false;
       arrayItems[index].activated = true;
       console.log(arrayItems);
-      const oldImage = Array.from(imagesSliderHero).find((image) => image.classList.contains("active"));
+      const oldImage = oldItem.itemImage;
       oldImage.classList.remove("active");
       oldImage.classList.add("hidden");
       imagesSliderHero[index].classList.add("active");
