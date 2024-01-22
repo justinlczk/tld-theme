@@ -68,11 +68,11 @@ get_header(); ?>
 
             ?>
 
-            <div class="absolute flex flex-col top-1/2 -translate-y-1/2 right-4">
+            <div class="absolute flex flex-col gap-2 top-1/2 -translate-y-1/2 right-4">
                 <?php
                 for($i = 0; $i < $count_images_slider_hero; $i++) {
                     ?>
-                <div class="w-4 h-4 rounded-full bg-[#E5E5E5]"></div>
+                <div class=" <?= $i== 0 ? "bg-primary" : "bg-[#E5E5E5]" ?> w-4 h-4 rounded-full "></div>
                 <?php
                 }
                 ?>
