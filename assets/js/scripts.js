@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     words.forEach((word, index) => {
         let tl = gsap.timeline({
             delay: index * 2, // Décalage pour chaque élément
+            repeat: -1,
             onComplete: () => {
                 if (index < words.length - 1) {
-                    tl.reverse(); // Inverse l'animation après son achèvement
+                    //tl.reverse(); // Inverse l'animation après son achèvement
                 }
             }
         });

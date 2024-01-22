@@ -8876,10 +8876,10 @@ document.addEventListener("DOMContentLoaded", function() {
     let tl = gsapWithCSS.timeline({
       delay: index * 2,
       // Décalage pour chaque élément
+      repeat: -1,
       onComplete: () => {
-        if (index < words.length - 1) {
-          tl.reverse();
-        }
+        if (index < words.length - 1)
+          ;
       }
     });
     tl.fromTo(
