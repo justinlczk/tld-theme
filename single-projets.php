@@ -122,7 +122,7 @@ if (get_field("brochure_active")) :
 
             <div class="flex items-center justify-center">
                 <a class="btn border border-black rounded-full py-3 px-6 block w-fit mt-3 uppercase font-medium text-xs"
-                   href="<?= get_field("lien_brochure") ?>"><?= get_field("contenu_bouton_telechargement") ?></a>
+                   href="<?= get_field("lien_brochure")["url"] ?>"><?= get_field("contenu_bouton_telechargement") ?></a>
             </div>
         </div>
     </section>
