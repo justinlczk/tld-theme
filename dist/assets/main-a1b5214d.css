@@ -1609,7 +1609,7 @@ footer .menu-menu-container ul li span {
   overflow: hidden;
   position: relative;
 }
-.homepage_title span {
+.homepage_title .container-words span {
   display: block;
   position: absolute;
   top: 0;

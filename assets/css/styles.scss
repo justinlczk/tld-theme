@@ -50,7 +50,6 @@ body.admin-bar {
     text-transform: uppercase;
     font-family: Montserrat;
     font-size: 12px;
-    
 
 
     @media screen and (max-width: 640px) {
@@ -63,7 +62,6 @@ body.admin-bar {
         align-items: center;
       }
     }
-
 
 
     sup {
@@ -97,14 +95,15 @@ footer {
     sup {
       text-transform: none;
     }
+
     li {
       padding: 0 12px;
 
       @media screen and (max-width: 640px) {
         font-size: 8px;
-      &:first-of-type {
-        padding-left: 0;
-      }
+        &:first-of-type {
+          padding-left: 0;
+        }
       }
 
       &:not(:last-of-type) {
@@ -121,15 +120,18 @@ footer {
     height: auto;
     overflow: hidden;
     position: relative;
-  }
-  span {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    &.active {
+
+    span {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &.active {
+      }
     }
   }
+
 }
 
 .wpcf7-form {
@@ -171,6 +173,7 @@ footer {
     height: fit-content;
     margin: 2rem auto 0 auto;
     z-index: 2;
+
     &:after {
       display: block;
       content: "";
@@ -244,9 +247,9 @@ footer {
 }
 
 
-
 .selector-type {
   color: rgba(0, 0, 0, 0.44);
+
   &.active {
     color: #000;
   }
