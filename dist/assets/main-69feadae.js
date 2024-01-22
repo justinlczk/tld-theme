@@ -8903,20 +8903,53 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 let imagesSliderHero = document.querySelectorAll(".image-slider-hero");
 let dotsSliderHero = document.querySelectorAll(".dot-slider-hero");
-dotsSliderHero.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    const oldImage = Array.from(imagesSliderHero).find((image) => image.classList.contains("active"));
-    oldImage.classList.remove("active");
-    oldImage.classList.add("hidden");
-    imagesSliderHero[index].classList.add("active");
-    imagesSliderHero[index].classList.remove("hidden");
-    const oldPoint = document.querySelector(".dot-slider-hero.active");
-    oldPoint.classList.remove("active");
-    oldPoint.classList.replace("bg-primary", "bg-[#E5E5E5]");
-    item.classList.add("active");
-    item.classList.replace("bg-[#E5E5E5]", "bg-primary");
+if (imagesSliderHero.length > 1) {
+  let arrayItems = [];
+  imagesSliderHero.forEach((itemImage, indexImage) => {
+    const activated = itemImage.classList.contains("active");
+    arrayItems.push({
+      itemImage,
+      activated,
+      index: indexImage,
+      dot: dotsSliderHero[indexImage]
+    });
   });
-});
+  const changeItemActive = () => {
+    let currentIndex = arrayItems.findIndex((item) => item.activated === true);
+    let nextItemIndex = currentIndex + 1;
+    if (nextItemIndex > arrayItems.length - 1) {
+      nextItemIndex = 0;
+    }
+    let currentItem = arrayItems[currentIndex];
+    currentItem.itemImage.classList.replace("active", "hidden");
+    currentItem.dot.classList.replace("bg-primary", "bg-[#E5E5E5]");
+    currentItem.dot.classList.remove("active");
+    let nextItem = arrayItems[nextItemIndex];
+    nextItem.itemImage.classList.replace("active", "hidden");
+    nextItem.dot.classList.replace("bg-[#E5E5E5]", "bg-primary");
+    nextItem.dot.classList.add("active");
+  };
+  let intervalAnimation = setInterval(changeItemActive, 5e3);
+  dotsSliderHero.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      clearInterval(intervalAnimation);
+      arrayItems.find((item2) => item2.activated === true).activated = false;
+      arrayItems[index].activated = true;
+      console.log(arrayItems);
+      const oldImage = Array.from(imagesSliderHero).find((image) => image.classList.contains("active"));
+      oldImage.classList.remove("active");
+      oldImage.classList.add("hidden");
+      imagesSliderHero[index].classList.add("active");
+      imagesSliderHero[index].classList.remove("hidden");
+      const oldPoint = document.querySelector(".dot-slider-hero.active");
+      oldPoint.classList.remove("active");
+      oldPoint.classList.replace("bg-primary", "bg-[#E5E5E5]");
+      item.classList.add("active");
+      item.classList.replace("bg-[#E5E5E5]", "bg-primary");
+      intervalAnimation = setInterval(changeItemActive, 5e3);
+    });
+  });
+}
 document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((title) => {
   if (title.textContent.includes(".")) {
     title.innerHTML = title.textContent.replace(/\./, (match) => `<span class="text-primary">${match}</span>`);
