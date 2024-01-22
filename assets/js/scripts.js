@@ -37,3 +37,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 let imagesSliderHero = document.querySelectorAll(".image-slider-hero");
+let dotsSliderHero = document.querySelectorAll(".dot-slider-hero");
+
+dotsSliderHero.forEach((item, index) => {
+    item.addEventListener("click", ()=>{
+        const oldImage = imagesSliderHero.find((image) => image.classList.contains("active"))
+
+        oldImage.classList.remove("active")
+        oldImage.classList.add("hidden")
+
+        imagesSliderHero[index].classList.add("active")
+        imagesSliderHero[index].classList.remove("hidden")
+    })
+})

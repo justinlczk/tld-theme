@@ -72,7 +72,7 @@ get_header(); ?>
                 <?php
                 for($i = 0; $i < $count_images_slider_hero; $i++) {
                     ?>
-                <div class=" <?= $i== 0 ? "bg-primary" : "bg-[#E5E5E5]" ?> w-4 h-4 rounded-full "></div>
+                <div class="dot-slider-hero <?= $i== 0 ? "bg-primary" : "bg-[#E5E5E5]" ?> w-4 h-4 rounded-full "></div>
                 <?php
                 }
                 ?>

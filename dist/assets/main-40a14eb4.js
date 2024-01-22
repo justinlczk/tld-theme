@@ -8901,7 +8901,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }, "+=1");
   });
 });
-document.querySelectorAll(".image-slider-hero");
+let imagesSliderHero = document.querySelectorAll(".image-slider-hero");
+let dotsSliderHero = document.querySelectorAll(".dot-slider-hero");
+dotsSliderHero.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    const oldImage = imagesSliderHero.find((image) => image.classList.contains("active"));
+    oldImage.classList.remove("active");
+    oldImage.classList.add("hidden");
+    imagesSliderHero[index].classList.add("active");
+    imagesSliderHero[index].classList.remove("hidden");
+  });
+});
 document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((title) => {
   if (title.textContent.includes(".")) {
     title.innerHTML = title.textContent.replace(/\./, (match) => `<span class="text-primary">${match}</span>`);
