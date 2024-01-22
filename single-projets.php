@@ -117,7 +117,7 @@ if (get_field("brochure_active")) :
             </div>
 
             <div class="w-full">
-                <?= do_shortcode(get_field("sortcode_pdf")) ?>
+                <?= do_shortcode(get_field("shortcode_pdf")) ?>
             </div>
 
             <div class="flex items-center justify-center">
