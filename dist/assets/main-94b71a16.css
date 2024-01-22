@@ -1611,9 +1611,6 @@ footer .menu-menu-container ul li span {
 }
 .homepage_title .container-words span {
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .wpcf7-form {
   background: rgba(255, 255, 255, 0.8);
