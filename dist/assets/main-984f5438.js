@@ -8877,7 +8877,7 @@ document.addEventListener("DOMContentLoaded", function() {
       delay: index * 2,
       // Décalage pour chaque élément
       repeat: -1,
-      repeatDelay: words.length * 2,
+      repeatDelay: index === 0 ? words.length * 2 - 2 : words.length * 2,
       onComplete: () => {
         if (index < words.length - 1)
           ;
