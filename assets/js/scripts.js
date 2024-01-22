@@ -48,5 +48,12 @@ dotsSliderHero.forEach((item, index) => {
 
         imagesSliderHero[index].classList.add("active")
         imagesSliderHero[index].classList.remove("hidden")
+
+        const oldPoint = document.querySelector(".dot-slider-hero.active")
+        oldPoint.classList.remove("active")
+        oldPoint.classList.replace("bg-primary", "bg-[#E5E5E5]")
+
+        item.classList.add("active")
+        item.classList.replace("bg-[#E5E5E5]", "bg-primary")
     })
 })

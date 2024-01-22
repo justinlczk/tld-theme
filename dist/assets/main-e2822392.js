@@ -8910,6 +8910,11 @@ dotsSliderHero.forEach((item, index) => {
     oldImage.classList.add("hidden");
     imagesSliderHero[index].classList.add("active");
     imagesSliderHero[index].classList.remove("hidden");
+    const oldPoint = document.querySelector(".dot-slider-hero.active");
+    oldPoint.classList.remove("active");
+    oldPoint.classList.replace("bg-primary", "bg-[#E5E5E5]");
+    item.classList.add("active");
+    item.classList.replace("bg-[#E5E5E5]", "bg-primary");
   });
 });
 document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((title) => {
