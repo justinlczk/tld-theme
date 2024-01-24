@@ -4,9 +4,28 @@ get_header();
 
 // lets get all the projets posts
 
-$projects = get_posts(array(
+$projects_particuliers = get_posts(array(
     "post_type" => "projets",
-     "numberposts" => -1
+    "numberposts" => -1,
+    'tax_query' => array(           // Début de la requête de taxonomie
+        array(
+            'taxonomy' => 'type-projet',  // Nom de la taxonomie
+            'field'    => 'slug',         // Type de champ pour filtrer (ici, le slug de la taxonomie)
+            'terms'    => 'particuliers' // Le terme de taxonomie à filtrer
+        )
+    )
+));
+
+$projects_professionnels = get_posts(array(
+    "post_type" => "projets",
+    "numberposts" => -1,
+    'tax_query' => array(           // Début de la requête de taxonomie
+        array(
+            'taxonomy' => 'type-projet',  // Nom de la taxonomie
+            'field'    => 'slug',         // Type de champ pour filtrer (ici, le slug de la taxonomie)
+            'terms'    => 'professionnels' // Le terme de taxonomie à filtrer
+        )
+    )
 ));
 
 $testimonials = get_posts(array(
@@ -21,9 +40,10 @@ $termes_type_projet = get_terms(array(
 
 ?>
 
-    <section class="flex justify-center items-center mb-20">
+    <section class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["url"] ?>)">
 
         <div class="container flex flex-col gap-12 px-4 sm:px-0">
+            <div class="w-full h-[50svh] sm:h-[75svh] flex gap-6 flex-col items-center justify-center">
 
             <h1 class="text-xl sm:text-6xl flex justify-center items-center gap-4 font-extrabold mt-12 text-center projects-filter">
                 <?php if (!is_wp_error($termes_type_projet)) {
@@ -39,34 +59,57 @@ $termes_type_projet = get_terms(array(
                 } ?>
             </h1>
 
-            <div class="grid sm:grid-cols-3 gap-x-6 gap-y-12">
-
-                <?php
-
-                foreach ($projects as $project) {
-                    setup_postdata($project);
-                    $project_tax = wp_get_post_terms($project->ID,"type-projet");
-                    ?>
-
-                    <a href="<?= get_permalink($project) ?>" class="flex flex-col gap-6 project-filtered project-<?= $project_tax[0]->slug ?>">
-
-                        <div class="grid gap-3" style="grid-template-columns: 1fr 24px;">
-                            <img class="shadow-xl rounded-[40px]" src="<?= get_field("image_miniature", $project->ID)['url'] ?>"
-                                 alt="<?= get_field("image_miniature", $project->ID)['alt'] ?>">
-                            <div class="return-text"><p class="uppercase"><?= get_field("date", $project->ID) ?></p></div>
-                        </div>
-
-                        <div>
-                            <h2 class="font-semibold mt-4 sm:mt-0 text-xl uppercase"><?= the_title() ?></h2>
-                            <p class="italic text-sm"><?= get_field("sous_titre_miniature", $project->ID) ?></p>
-                        </div>
-
-                    </a>
-
+            <div class="swiper w-full pt-16 slider-projects-home slider-projects-home-particuliers">
+                <div class="swiper-wrapper">
                     <?php
-                    wp_reset_postdata();
-                }
-                ?>
+                    foreach ($projects_particuliers as $projet_slider_home) {
+                        //var_dump($projet_slider_home);
+
+                        ?>
+
+                        <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
+                            <img class="rounded-xl sm:rounded-3xl"
+                                 src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                                 alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
+                            <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
+                            <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>
+                                - <?= get_field("date", $projet_slider_home->ID) ?></p>
+                        </a>
+
+                        <?php
+
+                    }
+                    ?>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper w-full hidden pt-16 slider-projects-home slider-projects-home-professionnels">
+                <div class="swiper-wrapper">
+                    <?php
+                    foreach ($projects_professionnels as $projet_slider_home) {
+                        //var_dump($projet_slider_home);
+
+                        ?>
+
+                        <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
+                            <img class="rounded-xl sm:rounded-3xl"
+                                 src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                                 alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
+                            <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
+                            <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>
+                                - <?= get_field("date", $projet_slider_home->ID) ?></p>
+                        </a>
+
+                        <?php
+
+                    }
+                    ?>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
             </div>
         </div>
 
