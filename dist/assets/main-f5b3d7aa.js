@@ -9060,7 +9060,7 @@ if (sliderProjectsHome) {
   const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
     loop: true,
     slidesPerView: 3,
-    spaceBetween: "-15%",
+    spaceBetween: "-25%",
     breakpoints: {
       640: {
         slidesPerView: 5,
