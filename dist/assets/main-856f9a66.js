@@ -9038,6 +9038,7 @@ document.addEventListener("DOMContentLoaded", function() {
       titlesToggle.forEach((titleToggle) => {
         titleToggle.addEventListener("click", () => {
           let type = titleToggle.dataset.type;
+          console.log(type);
           document.querySelector(".active.selector-type").classList.replace("active", "inactive");
           titleToggle.classList.replace("inactive", "active");
           document.querySelectorAll(".slider-projects-home").forEach((slider) => {
