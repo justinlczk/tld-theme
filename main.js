@@ -162,8 +162,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(allSlides[prevPrevIndex])
             console.log(allSlides[nextNextIndex])
 
-            allSlides.toArray().find(slide => slide.classList.contains("swiper-slide-prev-prev"))?.classList.remove("swiper-slide-prev-prev")
-            allSlides.toArray().find(slide => slide.classList.contains("swiper-slide-prev-next"))?.classList.remove("swiper-slide-prev-next")
+            Array.from(allSlides).find(slide => slide.classList.contains("swiper-slide-prev-prev"))?.classList.remove("swiper-slide-prev-prev")
+            Array.from(allSlides).find(slide => slide.classList.contains("swiper-slide-prev-next"))?.classList.remove("swiper-slide-prev-next")
 
             if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
             if (allSlides[nextNextIndex] != null) allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
