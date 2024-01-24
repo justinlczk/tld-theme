@@ -258,10 +258,14 @@ footer {
 .slider-projects-home {
   .swiper-slide {
     //transition: transform .2s ease-in;
+    opacity: 0;
+    display: none;
 
-    opacity: .6;
+    &.swiper-slide-active, &.swiper-slide-prev, &.swiper-slide-next, &.swiper-slide-prev-prev, &.swiper-slide-next-next {
+      display: block;
+    }
+
     z-index: 3;
-    transform: scale(.6) translateY(-30%);
 
     p, h3 {
       display: none;
@@ -287,6 +291,10 @@ footer {
 
     &.swiper-slide-next {
       transform: scale(.8) translateY(-15%) translateX(-5%);
+    }
+
+    &.swiper-slide-prev-prev, &.swiper-slide-next-next {
+      opacity: .6;
     }
 
     &.swiper-slide-prev-prev {
