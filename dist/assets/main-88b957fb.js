@@ -9089,6 +9089,7 @@ if (sliderProjectsHome) {
     if (allSlides[nextNextIndex])
       allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
   };
+  process();
   swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
     process();
   });
