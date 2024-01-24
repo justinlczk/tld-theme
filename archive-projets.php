@@ -118,8 +118,8 @@ $termes_type_projet = get_terms(array(
     <section class="flex justify-center items-center py-12 sm:py-24"
              style="background: linear-gradient(180deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #FFF 100%);">
         <div class="container grid sm:grid-cols-2 gap-12 px-4 sm:px-0">
-            <div class="w-full">
-                <img class="object-cover object-center" src="<?= esc_url(get_option("image_section_premier_visuel")) ?>" alt="Image exemple visuel">
+            <div class="w-full max-h-[25vh]">
+                <img class="object-cover object-center rounded-3xl" src="<?= esc_url(get_option("image_section_premier_visuel")) ?>" alt="Image exemple visuel">
             </div>
 
 
