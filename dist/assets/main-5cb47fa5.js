@@ -9071,12 +9071,11 @@ document.addEventListener("DOMContentLoaded", function() {
         prevEl: ".swiper-button-prev"
       }
     });
-    const process = () => {
+    swiperSliderProjectsHome.on("slideChange", () => {
       var _a, _b;
-      console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
       let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
       let currentActiveSlideIndex = this.activeIndex;
-      let totalSlides = swiperSliderProjectsHome.slides.length;
+      let totalSlides = this.slides.length;
       console.log(currentActiveSlideIndex, totalSlides);
       const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
       const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
@@ -9091,10 +9090,6 @@ document.addEventListener("DOMContentLoaded", function() {
         allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
       if (allSlides[nextNextIndex] != null)
         allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
-    };
-    process();
-    swiperSliderProjectsHome.on("slideChange", () => {
-      process();
     });
   }
 });

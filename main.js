@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
             //let currentActiveSlide = swiperSliderProjectsHome.slides.find(slide => slide.classList.contains("swiper-slide-active"))
             //let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex(slide => slide.classList.contains("swiper-slide-active"))
-            let currentActiveSlideIndex = this.activeIndex;
+            let currentActiveSlideIndex = swiperSliderProjectsHome.activeIndex;
             let totalSlides = swiperSliderProjectsHome.slides.length;
 
             //console.log(currentActiveSlide, currentActiveSlideIndex)
@@ -210,10 +210,24 @@ document.addEventListener("DOMContentLoaded", function () {
             }*/
         }
 
-        process()
-
         swiperSliderProjectsHome.on("slideChange", () => {
-            process()
+            let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
+            let currentActiveSlideIndex = this.activeIndex;
+            let totalSlides = this.slides.length;
+            console.log(currentActiveSlideIndex, totalSlides)
+            const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
+            const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
+            const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
+            const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
+            console.log("next & next next : ", nextIndex, nextNextIndex)
+            console.log("active : ", currentActiveSlideIndex)
+            console.log("prev & prev prev : ", prevIndex, prevPrevIndex)
+
+            document.querySelector(".swiper-slide-prev-prev")?.classList.remove("swiper-slide-prev-prev")
+            document.querySelector(".swiper-slide-next-next")?.classList.remove("swiper-slide-next-next")
+
+            if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
+            if (allSlides[nextNextIndex] != null) allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
         })
     }
 })
