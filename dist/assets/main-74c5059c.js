@@ -9084,8 +9084,8 @@ document.addEventListener("DOMContentLoaded", function() {
       const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
       console.log(allSlides[prevPrevIndex]);
       console.log(allSlides[nextNextIndex]);
-      (_a = allSlides.find((slide2) => slide2.classList.contains("swiper-slide-prev-prev"))) == null ? void 0 : _a.classList.remove("swiper-slide-prev-prev");
-      (_b = allSlides.find((slide2) => slide2.classList.contains("swiper-slide-prev-next"))) == null ? void 0 : _b.classList.remove("swiper-slide-prev-next");
+      (_a = allSlides.toArray().find((slide2) => slide2.classList.contains("swiper-slide-prev-prev"))) == null ? void 0 : _a.classList.remove("swiper-slide-prev-prev");
+      (_b = allSlides.toArray().find((slide2) => slide2.classList.contains("swiper-slide-prev-next"))) == null ? void 0 : _b.classList.remove("swiper-slide-prev-next");
       if (allSlides[prevPrevIndex] != null)
         allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
       if (allSlides[nextNextIndex] != null)
