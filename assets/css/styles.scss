@@ -261,7 +261,7 @@ footer {
 
     opacity: .6;
     z-index: 3;
-    transform: scale(.6);
+    transform: scale(.6) translateY(-30%);
 
     p, h3 {
       display: none;
@@ -270,7 +270,7 @@ footer {
     &.swiper-slide-active {
       opacity: 1;
       z-index: 5;
-      transform: scale(1);
+      transform: scale(1) translateY(0);
       p, h3 {
         display: block;
       }
@@ -279,7 +279,7 @@ footer {
     &.swiper-slide-prev, &.swiper-slide-next {
       opacity: .8;
       z-index: 4;
-      transform: scale(.8);
+      transform: scale(.8) translateY(-15%);
     }
   }
 }

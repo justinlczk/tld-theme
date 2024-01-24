@@ -155,7 +155,9 @@ if (sliderProjectsHome) {
         console.log(currentActiveSlide, currentActiveSlideIndex)
 
         allSlides.forEach(slide => {
-            slide.style.transform = 'translateY(0px)';
+            slide.classList.remove("swiper-slide-prev-prev")
+            slide.classList.remove("swiper-slide-next-next")
+            //slide.style.transform = 'translateY(0px)';
         });
 
         // Calculer les indices des slides adjacentes
@@ -164,11 +166,17 @@ if (sliderProjectsHome) {
         const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
         const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
 
+
+
+        if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
+        if (allSlides[nextNextIndex]) allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
+
+
         //console.log("nextSlide = ", nextIndex, allSlides[nextIndex]);
         //console.log("nextSlide + 1 = ", nextNextIndex, allSlides[nextNextIndex]);
 
         // Appliquer le décalage en Y
-        if (currentActiveSlide) currentActiveSlide.style.zIndex = "5";
+        /*if (currentActiveSlide) currentActiveSlide.style.zIndex = "5";
         if (allSlides[prevIndex]) allSlides[prevIndex].style.transform = 'translateY(-15%) translateX(5%) scale(.8)';
         if (allSlides[prevIndex]) allSlides[prevIndex].style.zIndex = '4';
         if (allSlides[nextIndex]) allSlides[nextIndex].style.transform = 'translateY(-15%) translateX(-5%) scale(.8)';
@@ -195,13 +203,13 @@ if (sliderProjectsHome) {
         if (window.innerWidth <= 640) {
             if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = "0";
             if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = "0";
-        }
+        }*/
     }
 
     //process()
 
-    swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
-        //process()
+    swiperSliderProjectsHome.on("slideChange", () => {
+        process()
     })
 }
 
