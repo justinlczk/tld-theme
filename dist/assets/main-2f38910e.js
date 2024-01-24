@@ -9039,16 +9039,12 @@ let slidersPerspectives = document.querySelectorAll(".slider-perspective");
 slidersPerspectives.forEach((sliderPerspectives) => {
   new Swiper(sliderPerspectives, {
     // configure Swiper to use modules
-    modules: [Pagination, Navigation],
+    modules: [Pagination],
     pagination: {
       el: ".swiper-pagination"
     },
     loop: true,
-    slidesPerView: 1,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
+    slidesPerView: 1
   });
 });
 let adminBar = document.querySelector("#wpadminbar");
@@ -9059,6 +9055,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let sliderProjectsHome = document.querySelector(".slider-projects-home");
   if (sliderProjectsHome) {
     const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
+      modules: [Navigation],
       loop: true,
       slidesPerView: 3,
       spaceBetween: "-25%",
@@ -9068,7 +9065,11 @@ document.addEventListener("DOMContentLoaded", function() {
           spaceBetween: "-5%"
         }
       },
-      centeredSlides: true
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
     });
     const process = () => {
       var _a, _b;
