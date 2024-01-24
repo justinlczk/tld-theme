@@ -9081,8 +9081,8 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("next & next next : ", nextIndex, nextNextIndex);
         console.log("active : ", currentActiveSlideIndex);
         console.log("prev & prev prev : ", prevIndex, prevPrevIndex);
-        (_a = document.querySelector(".swiper-slide-prev-prev")) == null ? void 0 : _a.classList.remove("swiper-slide-prev-prev");
-        (_b = document.querySelector(".swiper-slide-next-next")) == null ? void 0 : _b.classList.remove("swiper-slide-next-next");
+        (_a = slidersProjectsHome.querySelector(".swiper-slide-prev-prev")) == null ? void 0 : _a.classList.remove("swiper-slide-prev-prev");
+        (_b = slidersProjectsHome.querySelector(".swiper-slide-next-next")) == null ? void 0 : _b.classList.remove("swiper-slide-next-next");
         if (allSlides[prevPrevIndex] != null)
           allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
         if (allSlides[nextNextIndex] != null)
