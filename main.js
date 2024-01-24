@@ -126,109 +126,112 @@ if (adminBar) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    let sliderProjectsHome = document.querySelector(".slider-projects-home");
-    if (sliderProjectsHome) {
-        const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
-            modules: [Navigation],
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: "-25%",
-            breakpoints: {
-                640: {
-                    slidesPerView: 5,
-                    spaceBetween: "-5%",
-                }
-            },
-            centeredSlides: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        })
-
-        const process = () => {
-            console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
-            let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
-            //let currentActiveSlide = swiperSliderProjectsHome.slides.find(slide => slide.classList.contains("swiper-slide-active"))
-            //let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex(slide => slide.classList.contains("swiper-slide-active"))
-            let currentActiveSlideIndex = swiperSliderProjectsHome.activeIndex;
-            let totalSlides = swiperSliderProjectsHome.slides.length;
-
-            //console.log(currentActiveSlide, currentActiveSlideIndex)
-
-            console.log(currentActiveSlideIndex, totalSlides)
-
-            // Calculer les indices des slides adjacentes
-            const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
-            const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
-            const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
-            const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
-
-
-            console.log("next & next next : ", nextIndex, nextNextIndex)
-            console.log("active : ", currentActiveSlideIndex)
-            console.log("prev & prev prev : ", prevIndex, prevPrevIndex)
-
-            document.querySelector(".swiper-slide-prev-prev")?.classList.remove("swiper-slide-prev-prev")
-            document.querySelector(".swiper-slide-next-next")?.classList.remove("swiper-slide-next-next")
-
-            if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
-            if (allSlides[nextNextIndex] != null) allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
-
-
-            //console.log("nextSlide = ", nextIndex, allSlides[nextIndex]);
-            //console.log("nextSlide + 1 = ", nextNextIndex, allSlides[nextNextIndex]);
-
-            // Appliquer le décalage en Y
-            /*if (currentActiveSlide) currentActiveSlide.style.zIndex = "5";
-            if (allSlides[prevIndex]) allSlides[prevIndex].style.transform = 'translateY(-15%) translateX(5%) scale(.8)';
-            if (allSlides[prevIndex]) allSlides[prevIndex].style.zIndex = '4';
-            if (allSlides[nextIndex]) allSlides[nextIndex].style.transform = 'translateY(-15%) translateX(-5%) scale(.8)';
-            if (allSlides[nextIndex]) allSlides[nextIndex].style.zIndex = '4';
-            if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.transform = 'translateY(-30%) translateX(25%) scale(.6)';
-            if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.zIndex = '3';
-            if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.transform = 'translateY(-30%) translateX(-25%) scale(.6)';
-            if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.zIndex = '3';
-
-
-            allSlides.forEach((slide, index) => {
-                if (index == prevIndex || index == prevPrevIndex || index == nextIndex || index == nextNextIndex || index == currentActiveSlideIndex) {
-                    slide.style.opacity = "1";
-                    if (allSlides[prevIndex]) allSlides[prevIndex].style.opacity = '.6';
-                    if (allSlides[nextIndex]) allSlides[nextIndex].style.opacity = '.6';
-                    if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = '.8';
-                    if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = '.8';
-
-                } else {
-                    slide.style.opacity = "0";
-                }
+    let slidersProjectsHome = document.querySelectorAll(".slider-projects-home");
+    if (slidersProjectsHome) {
+        slidersProjectsHome.forEach((sliderProjectsHome)=>{
+            const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
+                modules: [Navigation],
+                loop: true,
+                slidesPerView: 3,
+                spaceBetween: "-25%",
+                breakpoints: {
+                    640: {
+                        slidesPerView: 5,
+                        spaceBetween: "-5%",
+                    }
+                },
+                centeredSlides: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
             })
 
-            if (window.innerWidth <= 640) {
-                if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = "0";
-                if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = "0";
-            }*/
-        }
+            const process = () => {
+                console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
+                let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
+                //let currentActiveSlide = swiperSliderProjectsHome.slides.find(slide => slide.classList.contains("swiper-slide-active"))
+                //let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex(slide => slide.classList.contains("swiper-slide-active"))
+                let currentActiveSlideIndex = swiperSliderProjectsHome.activeIndex;
+                let totalSlides = swiperSliderProjectsHome.slides.length;
 
-        swiperSliderProjectsHome.on("slideChange", function () {
-            let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
-            console.log(this)
-            let currentActiveSlideIndex = this.activeIndex;
-            let totalSlides = this.slides.length;
-            console.log(currentActiveSlideIndex, totalSlides)
-            const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
-            const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
-            const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
-            const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
-            console.log("next & next next : ", nextIndex, nextNextIndex)
-            console.log("active : ", currentActiveSlideIndex)
-            console.log("prev & prev prev : ", prevIndex, prevPrevIndex)
+                //console.log(currentActiveSlide, currentActiveSlideIndex)
 
-            document.querySelector(".swiper-slide-prev-prev")?.classList.remove("swiper-slide-prev-prev")
-            document.querySelector(".swiper-slide-next-next")?.classList.remove("swiper-slide-next-next")
+                console.log(currentActiveSlideIndex, totalSlides)
 
-            if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
-            if (allSlides[nextNextIndex] != null) allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
+                // Calculer les indices des slides adjacentes
+                const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
+                const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
+                const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
+                const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
+
+
+                console.log("next & next next : ", nextIndex, nextNextIndex)
+                console.log("active : ", currentActiveSlideIndex)
+                console.log("prev & prev prev : ", prevIndex, prevPrevIndex)
+
+                document.querySelector(".swiper-slide-prev-prev")?.classList.remove("swiper-slide-prev-prev")
+                document.querySelector(".swiper-slide-next-next")?.classList.remove("swiper-slide-next-next")
+
+                if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
+                if (allSlides[nextNextIndex] != null) allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
+
+
+                //console.log("nextSlide = ", nextIndex, allSlides[nextIndex]);
+                //console.log("nextSlide + 1 = ", nextNextIndex, allSlides[nextNextIndex]);
+
+                // Appliquer le décalage en Y
+                /*if (currentActiveSlide) currentActiveSlide.style.zIndex = "5";
+                if (allSlides[prevIndex]) allSlides[prevIndex].style.transform = 'translateY(-15%) translateX(5%) scale(.8)';
+                if (allSlides[prevIndex]) allSlides[prevIndex].style.zIndex = '4';
+                if (allSlides[nextIndex]) allSlides[nextIndex].style.transform = 'translateY(-15%) translateX(-5%) scale(.8)';
+                if (allSlides[nextIndex]) allSlides[nextIndex].style.zIndex = '4';
+                if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.transform = 'translateY(-30%) translateX(25%) scale(.6)';
+                if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.zIndex = '3';
+                if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.transform = 'translateY(-30%) translateX(-25%) scale(.6)';
+                if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.zIndex = '3';
+
+
+                allSlides.forEach((slide, index) => {
+                    if (index == prevIndex || index == prevPrevIndex || index == nextIndex || index == nextNextIndex || index == currentActiveSlideIndex) {
+                        slide.style.opacity = "1";
+                        if (allSlides[prevIndex]) allSlides[prevIndex].style.opacity = '.6';
+                        if (allSlides[nextIndex]) allSlides[nextIndex].style.opacity = '.6';
+                        if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = '.8';
+                        if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = '.8';
+
+                    } else {
+                        slide.style.opacity = "0";
+                    }
+                })
+
+                if (window.innerWidth <= 640) {
+                    if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = "0";
+                    if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = "0";
+                }*/
+            }
+
+            swiperSliderProjectsHome.on("slideChange", function () {
+                let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
+                console.log(this)
+                let currentActiveSlideIndex = this.activeIndex;
+                let totalSlides = this.slides.length;
+                console.log(currentActiveSlideIndex, totalSlides)
+                const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
+                const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
+                const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
+                const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
+                console.log("next & next next : ", nextIndex, nextNextIndex)
+                console.log("active : ", currentActiveSlideIndex)
+                console.log("prev & prev prev : ", prevIndex, prevPrevIndex)
+
+                document.querySelector(".swiper-slide-prev-prev")?.classList.remove("swiper-slide-prev-prev")
+                document.querySelector(".swiper-slide-next-next")?.classList.remove("swiper-slide-next-next")
+
+                if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
+                if (allSlides[nextNextIndex] != null) allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
+            })
+
         })
     }
 })

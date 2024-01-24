@@ -210,9 +210,85 @@ get_header(); ?>
         <?php
         $projets_slider_home = get_field("projets_slider");
 
+        $projects_particuliers = get_posts(array(
+            "post_type" => "projets",
+            "numberposts" => -1,
+            'tax_query' => array(           // Début de la requête de taxonomie
+                array(
+                    'taxonomy' => 'type-projet',  // Nom de la taxonomie
+                    'field'    => 'slug',         // Type de champ pour filtrer (ici, le slug de la taxonomie)
+                    'terms'    => 'particuliers' // Le terme de taxonomie à filtrer
+                )
+            )
+        ));
+
+        $projects_professionnels = get_posts(array(
+            "post_type" => "projets",
+            "numberposts" => -1,
+            'tax_query' => array(           // Début de la requête de taxonomie
+                array(
+                    'taxonomy' => 'type-projet',  // Nom de la taxonomie
+                    'field'    => 'slug',         // Type de champ pour filtrer (ici, le slug de la taxonomie)
+                    'terms'    => 'professionnels' // Le terme de taxonomie à filtrer
+                )
+            )
+        ));
+
         ?>
 
-        <div class="swiper pt-16 slider-projects-home">
+        <div class="swiper pt-16 slider-projects-home slider-projects-home-particuliers">
+            <div class="swiper-wrapper">
+                <?php
+                foreach ($projects_particuliers as $projet_slider_home) {
+                    //var_dump($projet_slider_home);
+
+                    ?>
+
+                    <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
+                        <img class="rounded-xl sm:rounded-3xl"
+                             src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                             alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
+                        <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
+                        <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>
+                            - <?= get_field("date", $projet_slider_home->ID) ?></p>
+                    </a>
+
+                    <?php
+
+                }
+                ?>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper pt-16 slider-projects-home slider-projects-home-particuliers">
+            <div class="swiper-wrapper">
+                <?php
+                foreach ($projects_professionnels as $projet_slider_home) {
+                    //var_dump($projet_slider_home);
+
+                    ?>
+
+                    <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
+                        <img class="rounded-xl sm:rounded-3xl"
+                             src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                             alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
+                        <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
+                        <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>
+                            - <?= get_field("date", $projet_slider_home->ID) ?></p>
+                    </a>
+
+                    <?php
+
+                }
+                ?>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+
+        <!--<div class="swiper pt-16 slider-projects-home">
             <div class="swiper-wrapper">
                 <?php
                 foreach ($projets_slider_home as $projet_slider_home) {
@@ -236,7 +312,7 @@ get_header(); ?>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-        </div>
+        </div> -->
 
 
     </div>
