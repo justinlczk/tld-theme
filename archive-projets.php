@@ -42,7 +42,7 @@ $termes_type_projet = get_terms(array(
 
     <section class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["url"] ?>)">
 
-        <div class="container flex flex-col gap-12 px-4 sm:px-0">
+
             <div class="w-full h-[50svh] sm:h-[75svh] flex gap-6 flex-col items-center justify-center">
 
             <h1 class="text-xl sm:text-6xl flex justify-center items-center gap-4 font-extrabold mt-12 text-center projects-filter">
@@ -111,7 +111,7 @@ $termes_type_projet = get_terms(array(
             </div>
 
             </div>
-        </div>
+       
 
     </section>
 
