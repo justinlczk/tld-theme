@@ -153,12 +153,6 @@ document.addEventListener("DOMContentLoaded", function () {
             let totalSlides = allSlides.length
             console.log(currentActiveSlide, currentActiveSlideIndex)
 
-            allSlides.forEach(slide => {
-                slide.classList.remove("swiper-slide-prev-prev")
-                slide.classList.remove("swiper-slide-next-next")
-                //slide.style.transform = 'translateY(0px)';
-            });
-
             // Calculer les indices des slides adjacentes
             const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
             const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
@@ -168,8 +162,11 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(allSlides[prevPrevIndex])
             console.log(allSlides[nextNextIndex])
 
-            if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
-            if (allSlides[nextNextIndex]) allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
+            allSlides.find(slide => slide.classList.contains("swiper-slide-prev-prev"))?.classList.remove("swiper-slide-prev-prev")
+            allSlides.find(slide => slide.classList.contains("swiper-slide-prev-next"))?.classList.remove("swiper-slide-prev-next")
+
+            if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
+            if (allSlides[nextNextIndex] != null) allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
 
 
             //console.log("nextSlide = ", nextIndex, allSlides[nextIndex]);

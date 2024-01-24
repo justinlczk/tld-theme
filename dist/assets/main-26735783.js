@@ -9071,25 +9071,24 @@ document.addEventListener("DOMContentLoaded", function() {
       centeredSlides: true
     });
     const process = () => {
+      var _a, _b;
       console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
       let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
       let currentActiveSlide = swiperSliderProjectsHome.slides.find((slide2) => slide2.classList.contains("swiper-slide-active"));
       let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex((slide2) => slide2.classList.contains("swiper-slide-active"));
       let totalSlides = allSlides.length;
       console.log(currentActiveSlide, currentActiveSlideIndex);
-      allSlides.forEach((slide2) => {
-        slide2.classList.remove("swiper-slide-prev-prev");
-        slide2.classList.remove("swiper-slide-next-next");
-      });
       const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
       const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
       const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
       const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
       console.log(allSlides[prevPrevIndex]);
       console.log(allSlides[nextNextIndex]);
-      if (allSlides[prevPrevIndex])
+      (_a = allSlides.find((slide2) => slide2.classList.contains("swiper-slide-prev-prev"))) == null ? void 0 : _a.classList.remove("swiper-slide-prev-prev");
+      (_b = allSlides.find((slide2) => slide2.classList.contains("swiper-slide-prev-next"))) == null ? void 0 : _b.classList.remove("swiper-slide-prev-next");
+      if (allSlides[prevPrevIndex] != null)
         allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
-      if (allSlides[nextNextIndex])
+      if (allSlides[nextNextIndex] != null)
         allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
     };
     process();
