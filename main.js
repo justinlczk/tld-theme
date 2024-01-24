@@ -129,7 +129,7 @@ if (sliderProjectsHome) {
     const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
         loop: true,
         slidesPerView: 3,
-        spaceBetween: -25,
+        spaceBetween: "-15%",
         breakpoints: {
             640: {
                 slidesPerView: 5,
@@ -192,10 +192,10 @@ if (sliderProjectsHome) {
         }
     }
 
-    process()
+    //process()
 
     swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
-        process()
+        //process()
     })
 }
 
@@ -206,3 +206,4 @@ togglesMobileMenu.forEach(toggleMobileMenu => {
         document.querySelector(".menu-mobile").classList.toggle("flex")
     })
 })
+

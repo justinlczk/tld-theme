@@ -50,14 +50,14 @@ $termes_type_projet = get_terms(array(
                     <a href="<?= get_permalink($project) ?>" class="flex flex-col gap-6 project-filtered project-<?= $project_tax[0]->slug ?>">
 
                         <div class="grid gap-3" style="grid-template-columns: 1fr 24px;">
-                            <img class="shadow-xl rounded-[40px]" src="<?= get_field("image_miniature")['url'] ?>"
-                                 alt="<?= get_field("image_miniature")['alt'] ?>">
-                            <div class="return-text"><p class="uppercase"><?= get_field("date") ?></p></div>
+                            <img class="shadow-xl rounded-[40px]" src="<?= get_field("image_miniature", $project->ID)['url'] ?>"
+                                 alt="<?= get_field("image_miniature", $project->ID)['alt'] ?>">
+                            <div class="return-text"><p class="uppercase"><?= get_field("date", $project->ID) ?></p></div>
                         </div>
 
                         <div>
                             <h2 class="font-semibold mt-4 sm:mt-0 text-xl uppercase"><?= the_title() ?></h2>
-                            <p class="italic text-sm"><?= get_field("sous_titre_miniature") ?></p>
+                            <p class="italic text-sm"><?= get_field("sous_titre_miniature", $project->ID) ?></p>
                         </div>
 
                     </a>
