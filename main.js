@@ -152,8 +152,11 @@ document.addEventListener("DOMContentLoaded", function () {
             //let currentActiveSlide = swiperSliderProjectsHome.slides.find(slide => slide.classList.contains("swiper-slide-active"))
             //let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex(slide => slide.classList.contains("swiper-slide-active"))
             let currentActiveSlideIndex = this.activeIndex;
-            let totalSlides = swiperSliderProjectsHome.slides.length
+            let totalSlides = swiperSliderProjectsHome.slides.length;
+
             //console.log(currentActiveSlide, currentActiveSlideIndex)
+
+            console.log(currentActiveSlideIndex, totalSlides)
 
             // Calculer les indices des slides adjacentes
             const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;

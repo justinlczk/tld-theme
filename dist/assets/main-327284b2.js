@@ -9077,6 +9077,7 @@ document.addEventListener("DOMContentLoaded", function() {
       let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
       let currentActiveSlideIndex = this.activeIndex;
       let totalSlides = swiperSliderProjectsHome.slides.length;
+      console.log(currentActiveSlideIndex, totalSlides);
       const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
       const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
       const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
