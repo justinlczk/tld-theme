@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         process()
 
-        swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
+        swiperSliderProjectsHome.on("activeIndexChange", () => {
             process()
         })
     }

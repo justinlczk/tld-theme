@@ -9092,7 +9092,7 @@ document.addEventListener("DOMContentLoaded", function() {
         allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
     };
     process();
-    swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
+    swiperSliderProjectsHome.on("activeIndexChange", () => {
       process();
     });
   }
