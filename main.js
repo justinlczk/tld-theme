@@ -108,12 +108,16 @@ let slidersPerspectives = document.querySelectorAll(".slider-perspective");
 slidersPerspectives.forEach(sliderPerspectives => {
     const swiperPerspective = new Swiper(sliderPerspectives, {
         // configure Swiper to use modules
-        modules: [Pagination],
+        modules: [Pagination, Navigation],
         pagination: {
             el: '.swiper-pagination',
         },
         loop: true,
         slidesPerView: 1,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
     });
 })
 
