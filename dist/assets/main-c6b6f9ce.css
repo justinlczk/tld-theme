@@ -1837,7 +1837,18 @@ footer .menu-menu-container ul li span {
 .slider-projects-home .swiper-slide.swiper-slide-prev, .slider-projects-home .swiper-slide.swiper-slide-next {
   opacity: 0.8;
   z-index: 4;
-  transform: scale(0.8) translateY(-15%);
+}
+.slider-projects-home .swiper-slide.swiper-slide-prev {
+  transform: scale(0.8) translateY(-15%) translateX(5%);
+}
+.slider-projects-home .swiper-slide.swiper-slide-next {
+  transform: scale(0.8) translateY(-15%) translateX(-5%);
+}
+.slider-projects-home .swiper-slide.swiper-slide-prev-prev {
+  transform: scale(0.6) translateY(-30%) translateX(25%);
+}
+.slider-projects-home .swiper-slide.swiper-slide-next-next {
+  transform: scale(0.6) translateY(-30%) translateX(-25%);
 }
 .before\:absolute::before{
   content: var(--tw-content);

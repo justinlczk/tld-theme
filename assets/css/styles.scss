@@ -279,7 +279,22 @@ footer {
     &.swiper-slide-prev, &.swiper-slide-next {
       opacity: .8;
       z-index: 4;
-      transform: scale(.8) translateY(-15%);
+    }
+
+    &.swiper-slide-prev {
+      transform: scale(.8) translateY(-15%) translateX(5%);
+    }
+
+    &.swiper-slide-next {
+      transform: scale(.8) translateY(-15%) translateX(-5%);
+    }
+
+    &.swiper-slide-prev-prev {
+      transform: scale(.6) translateY(-30%) translateX(25%);
+    }
+
+    &.swiper-slide-next-next {
+      transform: scale(.6) translateY(-30%) translateX(-25%);
     }
   }
 }
