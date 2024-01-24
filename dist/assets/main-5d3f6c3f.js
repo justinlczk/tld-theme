@@ -9071,9 +9071,10 @@ document.addEventListener("DOMContentLoaded", function() {
         prevEl: ".swiper-button-prev"
       }
     });
-    swiperSliderProjectsHome.on("slideChange", () => {
+    swiperSliderProjectsHome.on("slideChange", function() {
       var _a, _b;
       let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
+      console.log(this);
       let currentActiveSlideIndex = this.activeIndex;
       let totalSlides = this.slides.length;
       console.log(currentActiveSlideIndex, totalSlides);

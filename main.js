@@ -210,8 +210,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }*/
         }
 
-        swiperSliderProjectsHome.on("slideChange", () => {
+        swiperSliderProjectsHome.on("slideChange", function () {
             let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
+            console.log(this)
             let currentActiveSlideIndex = this.activeIndex;
             let totalSlides = this.slides.length;
             console.log(currentActiveSlideIndex, totalSlides)
