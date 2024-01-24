@@ -9082,12 +9082,13 @@ document.addEventListener("DOMContentLoaded", function() {
       const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
       const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
       const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
-      console.log(allSlides[prevPrevIndex]);
       console.log(allSlides[nextNextIndex]);
       (_a = document.querySelector(".swiper-slide-prev-prev")) == null ? void 0 : _a.classList.remove("swiper-slide-prev-prev");
       (_b = document.querySelector(".swiper-slide-next-next")) == null ? void 0 : _b.classList.remove("swiper-slide-next-next");
-      if (allSlides[prevPrevIndex] != null)
+      if (allSlides[prevPrevIndex] != null) {
         allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
+        console.log(allSlides[prevPrevIndex].classList);
+      }
       if (allSlides[nextNextIndex] != null)
         allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
     };
