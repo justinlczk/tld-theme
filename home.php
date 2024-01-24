@@ -205,7 +205,7 @@ get_header(); ?>
     </div>
 
 
-    <div class="w-full h-[50svh] sm:h-[75svh] flex flex-col items-center justify-center">
+    <div class="w-full h-[50svh] sm:h-[75svh] flex gap-6 flex-col items-center justify-center">
 
 
         <?php

@@ -43,7 +43,7 @@ if (sliderTestimonial) {
     });
 }
 
-let projectsFilter = document.querySelector(".projects-filter");
+/*let projectsFilter = document.querySelector(".projects-filter");
 if (projectsFilter) {
     let projectsFiltered = document.querySelectorAll(".project-filtered");
     let filters = projectsFilter.querySelectorAll(".selector-type");
@@ -66,7 +66,7 @@ if (projectsFilter) {
     })
 
     filters[0].click();
-}
+}*/
 
 let sliderProjectPage = document.querySelector(".main-slider-project");
 if (sliderProjectPage) {
@@ -128,7 +128,27 @@ if (adminBar) {
 document.addEventListener("DOMContentLoaded", function () {
     let slidersProjectsHome = document.querySelectorAll(".slider-projects-home");
     if (slidersProjectsHome) {
-        slidersProjectsHome.forEach((sliderProjectsHome)=>{
+
+        let titlesToggle = document.querySelectorAll(".selector-type")
+        if(titlesToggle) {
+            titlesToggle.forEach(titleToggle => {
+                titleToggle.addEventListener("click", () => {
+                    let type = titleToggle.dataset.type;
+                    document.querySelector(".active.selector-type").classList.replace("active", "inactive");
+                    titleToggle.classList.replace("inactive", "active");
+
+                    document.querySelectorAll(".slider-projects-home").forEach((slider) => {
+                        slider.classList?.add("hidden")
+                    })
+
+                    document.querySelector(`.slider-projects-home-${type}`).classList.remove("hidden")
+
+
+                })
+            })
+        }
+
+        slidersProjectsHome.forEach((sliderProjectsHome) => {
             const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
                 modules: [Navigation],
                 loop: true,

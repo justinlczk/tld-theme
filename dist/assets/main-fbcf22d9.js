@@ -8978,27 +8978,6 @@ if (sliderTestimonial) {
     }
   });
 }
-let projectsFilter = document.querySelector(".projects-filter");
-if (projectsFilter) {
-  let projectsFiltered = document.querySelectorAll(".project-filtered");
-  let filters = projectsFilter.querySelectorAll(".selector-type");
-  filters.forEach((filter) => {
-    filter.addEventListener("click", () => {
-      const datasetTypeProject = filter.dataset.type;
-      document.querySelector(".active.selector-type").classList.replace("active", "inactive");
-      filter.classList.replace("inactive", "active");
-      projectsFiltered.forEach((projectFiltered) => {
-        console.log(`project-${datasetTypeProject}`);
-        if (projectFiltered.classList.contains(`project-${datasetTypeProject}`)) {
-          projectFiltered.style.display = "block";
-        } else {
-          projectFiltered.style.display = "none";
-        }
-      });
-    });
-  });
-  filters[0].click();
-}
 let sliderProjectPage = document.querySelector(".main-slider-project");
 if (sliderProjectPage) {
   new Swiper(
@@ -9054,6 +9033,21 @@ if (adminBar) {
 document.addEventListener("DOMContentLoaded", function() {
   let slidersProjectsHome = document.querySelectorAll(".slider-projects-home");
   if (slidersProjectsHome) {
+    let titlesToggle = document.querySelectorAll(".selector-type");
+    if (titlesToggle) {
+      titlesToggle.forEach((titleToggle) => {
+        titleToggle.addEventListener("click", () => {
+          let type = titleToggle.dataset.type;
+          document.querySelector(".active.selector-type").classList.replace("active", "inactive");
+          titleToggle.classList.replace("inactive", "active");
+          document.querySelectorAll(".slider-projects-home").forEach((slider) => {
+            var _a;
+            (_a = slider.classList) == null ? void 0 : _a.add("hidden");
+          });
+          document.querySelector(`.slider-projects-home-${type}`).classList.remove("hidden");
+        });
+      });
+    }
     slidersProjectsHome.forEach((sliderProjectsHome) => {
       const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
         modules: [Navigation],
