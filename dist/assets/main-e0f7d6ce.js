@@ -4853,6 +4853,7 @@ function Pagination(_ref) {
 }
 const swiper = "";
 const pagination = "";
+const navigation = "";
 const styles = "";
 function _assertThisInitialized(self) {
   if (self === void 0) {
