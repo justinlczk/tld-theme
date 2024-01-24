@@ -72,6 +72,14 @@ function enregistrer_mes_reglages() {
     register_setting('mes_options_groupe', 'line_up_section_recommandation');
     register_setting('mes_options_groupe', 'line_down_section_recommandation');
     register_setting('mes_options_groupe', 'image_promotion_section_recommandation');
+    register_setting('mes_options_groupe', 'title_section_premier_visuel');
+    register_setting('mes_options_groupe', 'content_section_premier_visuel');
+    register_setting('mes_options_groupe', 'btn_section_premier_visuel');
+    register_setting('mes_options_groupe', 'url_section_premier_visuel');
+    register_setting('mes_options_groupe', 'image_section_premier_visuel');
+
+
+
 
 
     add_settings_section(
@@ -311,6 +319,61 @@ function enregistrer_mes_reglages() {
         'reglages-personnalises',
         'section_temoignages',
         array('name' => 'title_section_temoignages')
+    );
+
+    add_settings_section(
+        'section_premier_visuel',
+        'Section premier visuel',
+        null,
+        'reglages-personnalises'
+    );
+
+    add_settings_field(
+        'title_section_premier_visuel',
+        'Titre section premier visuel',
+        'generer_champ_texte_callback',
+        'reglages-personnalises',
+        'section_premier_visuel',
+        array('name' => 'title_section_premier_visuel')
+    );
+
+    add_settings_field(
+        'content_section_premier_visuel',
+        'Contenu section premier visuel',
+        'generer_champ_texte_large_callback',
+        'reglages-personnalises',
+        'section_premier_visuel',
+        array('name' => 'content_section_premier_visuel')
+    );
+
+    add_settings_field(
+        'btn_section_premier_visuel',
+        'Bouton section premier visuel',
+        'generer_champ_texte_callback',
+        'reglages-personnalises',
+        'section_premier_visuel',
+        array('name' => 'btn_section_premier_visuel')
+    );
+
+    add_settings_field(
+        'url_section_premier_visuel',
+        'Url bouton section premier visuel',
+        'generer_champ_texte_callback',
+        'reglages-personnalises',
+        'section_premier_visuel',
+        array('name' => 'url_section_premier_visuel')
+    );
+
+    add_settings_field(
+        'image_section_premier_visuel',
+        'Image section premier visuel',
+        'image_upload_callback',
+        'reglages-personnalises',
+        'section_premier_visuel',
+        array(
+            'option_name' => 'image_section_premier_visuel',
+            'media_title' => 'Sélectionner une image'
+        )
     );
 
 }
