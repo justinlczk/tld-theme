@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".swiper-slide-next-next")?.classList.remove("swiper-slide-next-next")
 
             if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
-            if (allSlides[nextNextIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-next-next");
+            if (allSlides[nextNextIndex] != null) allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
 
 
             //console.log("nextSlide = ", nextIndex, allSlides[nextIndex]);

@@ -9089,7 +9089,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (allSlides[prevPrevIndex] != null)
         allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
       if (allSlides[nextNextIndex] != null)
-        allSlides[prevPrevIndex].classList.add("swiper-slide-next-next");
+        allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
     };
     process();
     swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
