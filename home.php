@@ -242,7 +242,7 @@ get_header(); ?>
 
         ?>
 
-        <h3><?php if (!is_wp_error($termes_type_projet)) {
+        <h3 class="text-xl sm:text-3xl flex justify-center items-center gap-4 font-extrabold mt-12 text-center projects-filter"><?php if (!is_wp_error($termes_type_projet)) {
                 foreach ($termes_type_projet as $terme_index => $terme) {
                     ?>
                     <span data-type="<?= $terme->slug ?>" class="<?= $terme_index === 0 ? "active" : "inactive" ?> selector-type hover:cursor-pointer"><?= esc_html($terme->name) ?></span>
