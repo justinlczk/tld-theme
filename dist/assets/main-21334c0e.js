@@ -9072,7 +9072,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     const process = () => {
       console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
-      let allSlides = swiperSliderProjectsHome.slides;
+      let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
       let currentActiveSlide = swiperSliderProjectsHome.slides.find((slide2) => slide2.classList.contains("swiper-slide-active"));
       let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex((slide2) => slide2.classList.contains("swiper-slide-active"));
       let totalSlides = allSlides.length;
