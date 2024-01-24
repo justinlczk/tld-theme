@@ -161,7 +161,9 @@ document.addEventListener("DOMContentLoaded", function () {
             const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
 
 
-            console.log(allSlides[nextNextIndex])
+            console.log("next & next next : ", nextIndex, nextNextIndex)
+            console.log("active : ", currentActiveSlideIndex)
+            console.log("prev & prev prev : ", prevIndex, prevPrevIndex)
 
             document.querySelector(".swiper-slide-prev-prev")?.classList.remove("swiper-slide-prev-prev")
             document.querySelector(".swiper-slide-next-next")?.classList.remove("swiper-slide-next-next")

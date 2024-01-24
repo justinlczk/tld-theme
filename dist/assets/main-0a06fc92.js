@@ -9083,7 +9083,9 @@ document.addEventListener("DOMContentLoaded", function() {
       const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
       const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
       const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
-      console.log(allSlides[nextNextIndex]);
+      console.log("next & next next : ", nextIndex, nextNextIndex);
+      console.log("active : ", currentActiveSlideIndex);
+      console.log("prev & prev prev : ", prevIndex, prevPrevIndex);
       (_a = document.querySelector(".swiper-slide-prev-prev")) == null ? void 0 : _a.classList.remove("swiper-slide-prev-prev");
       (_b = document.querySelector(".swiper-slide-next-next")) == null ? void 0 : _b.classList.remove("swiper-slide-next-next");
       if (allSlides[prevPrevIndex] != null)
