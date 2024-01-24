@@ -1820,11 +1820,11 @@ footer .menu-menu-container ul li span {
 }
 .slider-projects-home .swiper-slide {
   opacity: 0;
-  display: none;
+  pointer-events: none;
   z-index: 3;
 }
 .slider-projects-home .swiper-slide.swiper-slide-active, .slider-projects-home .swiper-slide.swiper-slide-prev, .slider-projects-home .swiper-slide.swiper-slide-next, .slider-projects-home .swiper-slide.swiper-slide-prev-prev, .slider-projects-home .swiper-slide.swiper-slide-next-next {
-  display: block;
+  pointer-events: auto;
 }
 .slider-projects-home .swiper-slide p, .slider-projects-home .swiper-slide h3 {
   display: none;

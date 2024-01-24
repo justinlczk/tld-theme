@@ -259,10 +259,10 @@ footer {
   .swiper-slide {
     //transition: transform .2s ease-in;
     opacity: 0;
-    display: none;
+    pointer-events: none;
 
     &.swiper-slide-active, &.swiper-slide-prev, &.swiper-slide-next, &.swiper-slide-prev-prev, &.swiper-slide-next-next {
-      display: block;
+      pointer-events: auto;
     }
 
     z-index: 3;
