@@ -262,24 +262,21 @@ footer {
     opacity: .6;
     z-index: 3;
 
-    .swiper-slide-active {
-      opacity: 1;
-      z-index: 5;
-    }
-
-    .swiper-slide-prev, .swiper-slide-next {
-      opacity: .8;
-      z-index: 4;
-    }
-
     p, h3 {
       display: none;
     }
 
     &.swiper-slide-active {
+      opacity: 1;
+      z-index: 5;
       p, h3 {
         display: block;
       }
+    }
+
+    &.swiper-slide-prev, &.swiper-slide-next {
+      opacity: .8;
+      z-index: 4;
     }
   }
 }
