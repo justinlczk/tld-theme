@@ -1366,6 +1366,10 @@ html {
   -o-object-position: bottom;
      object-position: bottom;
 }
+.object-center{
+  -o-object-position: center;
+     object-position: center;
+}
 .p-12{
   padding: 3rem;
 }
