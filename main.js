@@ -128,90 +128,92 @@ if (adminBar) {
     document.querySelector("header").style.marginTop = `${adminBar.offsetHeight}px`
 }
 
-let sliderProjectsHome = document.querySelector(".slider-projects-home");
-if (sliderProjectsHome) {
 
-
-    const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: "-25%",
-        breakpoints: {
-            640: {
-                slidesPerView: 5,
-                spaceBetween: "-5%",
-            }
-        },
-        centeredSlides: true,
-    })
-
-    const process = () => {
-
-        console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
-        let allSlides = swiperSliderProjectsHome.slides;
-        let currentActiveSlide = swiperSliderProjectsHome.slides.find(slide => slide.classList.contains("swiper-slide-active"))
-        let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex(slide => slide.classList.contains("swiper-slide-active"))
-        let totalSlides = allSlides.length
-        console.log(currentActiveSlide, currentActiveSlideIndex)
-
-        allSlides.forEach(slide => {
-            slide.classList.remove("swiper-slide-prev-prev")
-            slide.classList.remove("swiper-slide-next-next")
-            //slide.style.transform = 'translateY(0px)';
-        });
-
-        // Calculer les indices des slides adjacentes
-        const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
-        const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
-        const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
-        const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
-
-
-
-        if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
-        if (allSlides[nextNextIndex]) allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
-
-
-        //console.log("nextSlide = ", nextIndex, allSlides[nextIndex]);
-        //console.log("nextSlide + 1 = ", nextNextIndex, allSlides[nextNextIndex]);
-
-        // Appliquer le décalage en Y
-        /*if (currentActiveSlide) currentActiveSlide.style.zIndex = "5";
-        if (allSlides[prevIndex]) allSlides[prevIndex].style.transform = 'translateY(-15%) translateX(5%) scale(.8)';
-        if (allSlides[prevIndex]) allSlides[prevIndex].style.zIndex = '4';
-        if (allSlides[nextIndex]) allSlides[nextIndex].style.transform = 'translateY(-15%) translateX(-5%) scale(.8)';
-        if (allSlides[nextIndex]) allSlides[nextIndex].style.zIndex = '4';
-        if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.transform = 'translateY(-30%) translateX(25%) scale(.6)';
-        if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.zIndex = '3';
-        if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.transform = 'translateY(-30%) translateX(-25%) scale(.6)';
-        if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.zIndex = '3';
-
-
-        allSlides.forEach((slide, index) => {
-            if (index == prevIndex || index == prevPrevIndex || index == nextIndex || index == nextNextIndex || index == currentActiveSlideIndex) {
-                slide.style.opacity = "1";
-                if (allSlides[prevIndex]) allSlides[prevIndex].style.opacity = '.6';
-                if (allSlides[nextIndex]) allSlides[nextIndex].style.opacity = '.6';
-                if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = '.8';
-                if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = '.8';
-
-            } else {
-                slide.style.opacity = "0";
-            }
+document.addEventListener("DOMContentLoaded", function () {
+    let sliderProjectsHome = document.querySelector(".slider-projects-home");
+    if (sliderProjectsHome) {
+        const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: "-25%",
+            breakpoints: {
+                640: {
+                    slidesPerView: 5,
+                    spaceBetween: "-5%",
+                }
+            },
+            centeredSlides: true,
         })
 
-        if (window.innerWidth <= 640) {
-            if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = "0";
-            if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = "0";
-        }*/
-    }
+        const process = () => {
+            console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
+            let allSlides = swiperSliderProjectsHome.slides;
+            let currentActiveSlide = swiperSliderProjectsHome.slides.find(slide => slide.classList.contains("swiper-slide-active"))
+            let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex(slide => slide.classList.contains("swiper-slide-active"))
+            let totalSlides = allSlides.length
+            console.log(currentActiveSlide, currentActiveSlideIndex)
 
-    process()
+            allSlides.forEach(slide => {
+                slide.classList.remove("swiper-slide-prev-prev")
+                slide.classList.remove("swiper-slide-next-next")
+                //slide.style.transform = 'translateY(0px)';
+            });
 
-    swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
+            // Calculer les indices des slides adjacentes
+            const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
+            const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
+            const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
+            const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
+
+            console.log(allSlides[prevPrevIndex], prevPrevIndex)
+            console.log(allSlides[nextNextIndex], nextNextIndex)
+
+            if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
+            if (allSlides[nextNextIndex]) allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
+
+
+            //console.log("nextSlide = ", nextIndex, allSlides[nextIndex]);
+            //console.log("nextSlide + 1 = ", nextNextIndex, allSlides[nextNextIndex]);
+
+            // Appliquer le décalage en Y
+            /*if (currentActiveSlide) currentActiveSlide.style.zIndex = "5";
+            if (allSlides[prevIndex]) allSlides[prevIndex].style.transform = 'translateY(-15%) translateX(5%) scale(.8)';
+            if (allSlides[prevIndex]) allSlides[prevIndex].style.zIndex = '4';
+            if (allSlides[nextIndex]) allSlides[nextIndex].style.transform = 'translateY(-15%) translateX(-5%) scale(.8)';
+            if (allSlides[nextIndex]) allSlides[nextIndex].style.zIndex = '4';
+            if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.transform = 'translateY(-30%) translateX(25%) scale(.6)';
+            if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.zIndex = '3';
+            if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.transform = 'translateY(-30%) translateX(-25%) scale(.6)';
+            if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.zIndex = '3';
+
+
+            allSlides.forEach((slide, index) => {
+                if (index == prevIndex || index == prevPrevIndex || index == nextIndex || index == nextNextIndex || index == currentActiveSlideIndex) {
+                    slide.style.opacity = "1";
+                    if (allSlides[prevIndex]) allSlides[prevIndex].style.opacity = '.6';
+                    if (allSlides[nextIndex]) allSlides[nextIndex].style.opacity = '.6';
+                    if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = '.8';
+                    if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = '.8';
+
+                } else {
+                    slide.style.opacity = "0";
+                }
+            })
+
+            if (window.innerWidth <= 640) {
+                if (allSlides[nextNextIndex]) allSlides[nextNextIndex].style.opacity = "0";
+                if (allSlides[prevPrevIndex]) allSlides[prevPrevIndex].style.opacity = "0";
+            }*/
+        }
+
         process()
-    })
-}
+
+        swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
+            process()
+        })
+    }
+})
+
 
 const togglesMobileMenu = document.querySelectorAll(".toggle-mobile");
 togglesMobileMenu.forEach(toggleMobileMenu => {

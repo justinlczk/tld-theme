@@ -9055,45 +9055,49 @@ let adminBar = document.querySelector("#wpadminbar");
 if (adminBar) {
   document.querySelector("header").style.marginTop = `${adminBar.offsetHeight}px`;
 }
-let sliderProjectsHome = document.querySelector(".slider-projects-home");
-if (sliderProjectsHome) {
-  const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
-    loop: true,
-    slidesPerView: 3,
-    spaceBetween: "-25%",
-    breakpoints: {
-      640: {
-        slidesPerView: 5,
-        spaceBetween: "-5%"
-      }
-    },
-    centeredSlides: true
-  });
-  const process = () => {
-    console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
-    let allSlides = swiperSliderProjectsHome.slides;
-    let currentActiveSlide = swiperSliderProjectsHome.slides.find((slide2) => slide2.classList.contains("swiper-slide-active"));
-    let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex((slide2) => slide2.classList.contains("swiper-slide-active"));
-    let totalSlides = allSlides.length;
-    console.log(currentActiveSlide, currentActiveSlideIndex);
-    allSlides.forEach((slide2) => {
-      slide2.classList.remove("swiper-slide-prev-prev");
-      slide2.classList.remove("swiper-slide-next-next");
+document.addEventListener("DOMContentLoaded", function() {
+  let sliderProjectsHome = document.querySelector(".slider-projects-home");
+  if (sliderProjectsHome) {
+    const swiperSliderProjectsHome = new Swiper(sliderProjectsHome, {
+      loop: true,
+      slidesPerView: 3,
+      spaceBetween: "-25%",
+      breakpoints: {
+        640: {
+          slidesPerView: 5,
+          spaceBetween: "-5%"
+        }
+      },
+      centeredSlides: true
     });
-    const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
-    const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
-    const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
-    const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
-    if (allSlides[prevPrevIndex])
-      allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
-    if (allSlides[nextNextIndex])
-      allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
-  };
-  process();
-  swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
+    const process = () => {
+      console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
+      let allSlides = swiperSliderProjectsHome.slides;
+      let currentActiveSlide = swiperSliderProjectsHome.slides.find((slide2) => slide2.classList.contains("swiper-slide-active"));
+      let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex((slide2) => slide2.classList.contains("swiper-slide-active"));
+      let totalSlides = allSlides.length;
+      console.log(currentActiveSlide, currentActiveSlideIndex);
+      allSlides.forEach((slide2) => {
+        slide2.classList.remove("swiper-slide-prev-prev");
+        slide2.classList.remove("swiper-slide-next-next");
+      });
+      const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
+      const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
+      const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
+      const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
+      console.log(allSlides[prevPrevIndex], prevPrevIndex);
+      console.log(allSlides[nextNextIndex], nextNextIndex);
+      if (allSlides[prevPrevIndex])
+        allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
+      if (allSlides[nextNextIndex])
+        allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
+    };
     process();
-  });
-}
+    swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
+      process();
+    });
+  }
+});
 const togglesMobileMenu = document.querySelectorAll(".toggle-mobile");
 togglesMobileMenu.forEach((toggleMobileMenu) => {
   toggleMobileMenu.addEventListener("click", () => {
