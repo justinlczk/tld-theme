@@ -9085,8 +9085,8 @@ document.addEventListener("DOMContentLoaded", function() {
       const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
       const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
       const nextNextIndex = nextIndex === totalSlides - 1 ? 0 : nextIndex + 1;
-      console.log(allSlides[prevPrevIndex], prevPrevIndex);
-      console.log(allSlides[nextNextIndex], nextNextIndex);
+      console.log(allSlides[prevPrevIndex]);
+      console.log(allSlides[nextNextIndex]);
       if (allSlides[prevPrevIndex])
         allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
       if (allSlides[nextNextIndex])
