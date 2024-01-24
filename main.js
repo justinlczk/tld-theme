@@ -149,10 +149,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const process = () => {
             console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
             let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
-            let currentActiveSlide = swiperSliderProjectsHome.slides.find(slide => slide.classList.contains("swiper-slide-active"))
-            let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex(slide => slide.classList.contains("swiper-slide-active"))
-            let totalSlides = allSlides.length
-            console.log(currentActiveSlide, currentActiveSlideIndex)
+            //let currentActiveSlide = swiperSliderProjectsHome.slides.find(slide => slide.classList.contains("swiper-slide-active"))
+            //let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex(slide => slide.classList.contains("swiper-slide-active"))
+            let currentActiveSlideIndex = this.activeIndex;
+            let totalSlides = swiperSliderProjectsHome.slides.length
+            //console.log(currentActiveSlide, currentActiveSlideIndex)
 
             // Calculer les indices des slides adjacentes
             const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
@@ -208,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         process()
 
-        swiperSliderProjectsHome.on("activeIndexChange", () => {
+        swiperSliderProjectsHome.on("slideChange", () => {
             process()
         })
     }

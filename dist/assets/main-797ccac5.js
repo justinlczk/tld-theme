@@ -9075,10 +9075,8 @@ document.addEventListener("DOMContentLoaded", function() {
       var _a, _b;
       console.log(swiperSliderProjectsHome.slides, swiperSliderProjectsHome.activeIndex);
       let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
-      let currentActiveSlide = swiperSliderProjectsHome.slides.find((slide2) => slide2.classList.contains("swiper-slide-active"));
-      let currentActiveSlideIndex = swiperSliderProjectsHome.slides.findIndex((slide2) => slide2.classList.contains("swiper-slide-active"));
-      let totalSlides = allSlides.length;
-      console.log(currentActiveSlide, currentActiveSlideIndex);
+      let currentActiveSlideIndex = this.activeIndex;
+      let totalSlides = swiperSliderProjectsHome.slides.length;
       const prevIndex = currentActiveSlideIndex === 0 ? totalSlides - 1 : currentActiveSlideIndex - 1;
       const nextIndex = currentActiveSlideIndex === totalSlides - 1 ? 0 : currentActiveSlideIndex + 1;
       const prevPrevIndex = prevIndex === 0 ? totalSlides - 1 : prevIndex - 1;
@@ -9094,7 +9092,7 @@ document.addEventListener("DOMContentLoaded", function() {
         allSlides[nextNextIndex].classList.add("swiper-slide-next-next");
     };
     process();
-    swiperSliderProjectsHome.on("activeIndexChange", () => {
+    swiperSliderProjectsHome.on("slideChange", () => {
       process();
     });
   }
