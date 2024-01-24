@@ -1822,6 +1822,7 @@ footer .menu-menu-container ul li span {
   color: #000;
 }
 .slider-projects-home .swiper-slide {
+  transition: all 0.2s ease-in;
   opacity: 0;
   pointer-events: none;
   z-index: 3;

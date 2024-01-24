@@ -261,7 +261,7 @@ footer {
 
 .slider-projects-home {
   .swiper-slide {
-    //transition: transform .2s ease-in;
+    transition: all .2s ease-in;
     opacity: 0;
     pointer-events: none;
 
