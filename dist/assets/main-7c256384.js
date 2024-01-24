@@ -9069,7 +9069,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
       swiperSliderProjectsHome.on("slideChange", function() {
         var _a, _b;
-        let allSlides = document.querySelectorAll(".slider-projects-home .swiper-slide");
+        let allSlides = sliderProjectsHome.querySelectorAll(".slider-projects-home .swiper-slide");
         console.log(this);
         let currentActiveSlideIndex = this.activeIndex;
         let totalSlides = this.slides.length;
