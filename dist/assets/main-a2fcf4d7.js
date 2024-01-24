@@ -9085,12 +9085,10 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(allSlides[nextNextIndex]);
       (_a = document.querySelector(".swiper-slide-prev-prev")) == null ? void 0 : _a.classList.remove("swiper-slide-prev-prev");
       (_b = document.querySelector(".swiper-slide-next-next")) == null ? void 0 : _b.classList.remove("swiper-slide-next-next");
-      if (allSlides[prevPrevIndex] != null) {
-        allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev";
-        console.log(allSlides[prevPrevIndex].classList);
-      }
+      if (allSlides[prevPrevIndex] != null)
+        allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
       if (allSlides[nextNextIndex] != null)
-        allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
+        allSlides[prevPrevIndex].classList.add("swiper-slide-next-next");
     };
     process();
     swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {

@@ -165,11 +165,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelector(".swiper-slide-prev-prev")?.classList.remove("swiper-slide-prev-prev")
             document.querySelector(".swiper-slide-next-next")?.classList.remove("swiper-slide-next-next")
 
-            if (allSlides[prevPrevIndex] != null) {
-                allSlides[prevPrevIndex].classList.add = "swiper-slide-prev-prev"
-                console.log(allSlides[prevPrevIndex].classList)
-            };
-            if (allSlides[nextNextIndex] != null) allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
+            if (allSlides[prevPrevIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-prev-prev");
+            if (allSlides[nextNextIndex] != null) allSlides[prevPrevIndex].classList.add("swiper-slide-next-next");
 
 
             //console.log("nextSlide = ", nextIndex, allSlides[nextIndex]);
