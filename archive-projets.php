@@ -5,7 +5,8 @@ get_header();
 // lets get all the projets posts
 
 $projects = get_posts(array(
-    "post_type" => "projets"
+    "post_type" => "projets",
+     "numberposts" => -1
 ));
 
 $testimonials = get_posts(array(
