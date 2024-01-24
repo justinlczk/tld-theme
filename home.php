@@ -207,7 +207,13 @@ get_header(); ?>
 
     <div class="w-full h-[50svh] sm:h-[75svh] flex items-center justify-center">
 
+
         <?php
+        $termes_type_projet = get_terms(array(
+            'taxonomy' => 'type-projet',
+            'hide_empty' => false, // Mettez à true si vous voulez seulement les termes qui sont assignés à des posts
+        ));
+
         $projets_slider_home = get_field("projets_slider");
 
         $projects_particuliers = get_posts(array(
@@ -235,6 +241,18 @@ get_header(); ?>
         ));
 
         ?>
+
+        <h3><?php if (!is_wp_error($termes_type_projet)) {
+                foreach ($termes_type_projet as $terme_index => $terme) {
+                    ?>
+                    <span data-type="<?= $terme->slug ?>" class="<?= $terme_index === 0 ? "active" : "inactive" ?> selector-type hover:cursor-pointer"><?= esc_html($terme->name) ?></span>
+
+                    <?php
+                    if (count($termes_type_projet) !== $terme_index + 1) {
+                        echo '<span class="separator inline-block w-px h-5 sm:h-12 bg-primary"></span>';
+                    }
+                }
+            } ?></h3>
 
         <div class="swiper pt-16 slider-projects-home slider-projects-home-particuliers">
             <div class="swiper-wrapper">
