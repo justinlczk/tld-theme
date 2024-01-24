@@ -1818,6 +1818,9 @@ footer .menu-menu-container ul li span {
 .selector-type.active {
   color: #000;
 }
+.swiper-button-prev:after, .swiper-button-next:after {
+  color: #000;
+}
 .slider-projects-home .swiper-slide {
   opacity: 0;
   pointer-events: none;

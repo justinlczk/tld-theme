@@ -255,6 +255,10 @@ footer {
   }
 }
 
+.swiper-button-prev:after, .swiper-button-next:after {
+  color: #000;
+}
+
 .slider-projects-home {
   .swiper-slide {
     //transition: transform .2s ease-in;
