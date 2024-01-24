@@ -62,7 +62,7 @@ if(imagesSliderHero.length > 1) {
             nextItemIndex = 0;
         }
 
-        console.log("next item",nextItemIndex)
+        //console.log("next item",nextItemIndex)
 
         let currentItem = arrayItems[currentIndex];
 

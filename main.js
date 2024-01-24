@@ -208,7 +208,7 @@ if (sliderProjectsHome) {
 
     //process()
 
-    swiperSliderProjectsHome.on("slideChange", () => {
+    swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
         process()
     })
 }

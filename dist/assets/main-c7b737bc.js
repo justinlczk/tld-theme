@@ -8921,7 +8921,6 @@ if (imagesSliderHero.length > 1) {
     if (nextItemIndex > arrayItems.length - 1) {
       nextItemIndex = 0;
     }
-    console.log("next item", nextItemIndex);
     let currentItem = arrayItems[currentIndex];
     currentItem.itemImage.classList.replace("active", "hidden");
     currentItem.dot.classList.replace("bg-primary", "bg-[#E5E5E5]");
@@ -9090,7 +9089,7 @@ if (sliderProjectsHome) {
     if (allSlides[nextNextIndex])
       allSlides[prevPrevIndex].classList.add = "swiper-slide-next-next";
   };
-  swiperSliderProjectsHome.on("slideChange", () => {
+  swiperSliderProjectsHome.on("slideChangeTransitionEnd", () => {
     process();
   });
 }
