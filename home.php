@@ -8,7 +8,6 @@
  */
 
 get_header();
-$page_id = get_queried_object_id();
 ?>
 
 
@@ -19,7 +18,7 @@ $page_id = get_queried_object_id();
         <div class="w-[calc(100%-32px)] mx-auto sm:mx-0 sm:w-fit  bg-[#ffffff80] py-4 px-4 sm:py-20 sm:px-24 rounded-3xl sm:rounded-r-3xl backdrop-blur-sm relative z-20">
 
             <?php
-            $title_hero = get_field("titre", $page_id);
+            $title_hero = get_field("titre");
             $array_hero = explode(",", $title_hero["liste_de_mots"]);
             $end_hero = $title_hero["fin_de_phrase"];
             foreach ($array_hero as &$value) {

@@ -207,18 +207,18 @@ if (get_field("perspective_active")) :
 
                                 break;
 
-                            case "titre": {
+                            case "titre":
                                 ?>
-                                <h2 class="text-3xl sm:text-6xl text-black font-extrabold"><?= $content_perspective["titre"] ?></h2>
+                                <h2 class="text-3xl sm:text-6xl text-black font-extrabold"><?= $content_perspective["titre"]; ?></h2>
                                 <?php
-                            }
-                            break;
+                                break;
 
-                            case "texte" : {
+
+                            case "texte" :
                                 ?>
-                                <div class=""><?= $content_perspective["texte"] ?></div>
+                                <div class=""><?= $content_perspective["texte"]; ?></div>
                                 <?php
-                            }
+
                             break;
                         }
 
