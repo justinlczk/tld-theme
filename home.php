@@ -434,7 +434,7 @@ get_header(); ?>
                         <a class="btn before:block before:border before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
                            href="<?= $btn_about_contact["lien"] ?>"><span
                                     class="relative z-10"><?= $btn_about_contact["texte"] ?></span></a>
-                        <?php if ($btn_about_cv != null && isset($btn_about_cv["lien"]) && isset($btn_about_cv["icone"]) && isset($btn_about_cv["texte"])) : ?>
+                        <?php if ($btn_about_cv != null && isset($btn_about_cv["lien"]) && $btn_about_cv["lien"] != null && isset($btn_about_cv["icone"]) && isset($btn_about_cv["texte"]) && $btn_about_cv["texte"] != null) : ?>
                             <a
                             class="flex gap-2 btn border border-black rounded-full py-3 px-6 block w-fit mt-3 text-black uppercase text-xs"
                             href="<?= $btn_about_cv["lien"] ?>"><span><img src="<?= $btn_about_cv["icone"]["url"] ?>"
