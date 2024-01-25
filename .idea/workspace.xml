@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1a5478a8-8ae2-4bd2-bda7-e631a0dafe0f" name="Changes" comment="Add scss compatibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/main-3d0eb90f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/assets/main-5f21d13a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive-projets.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-projets.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +55,7 @@
       <workItem from="1702939779404" duration="1170000" />
       <workItem from="1703961854423" duration="4180000" />
       <workItem from="1704033036960" duration="15000" />
-      <workItem from="1705922908469" duration="22305000" />
+      <workItem from="1705922908469" duration="22515000" />
     </task>
     <task id="LOCAL-00001" summary="Add scss compatibility">
       <created>1702938275490</created>

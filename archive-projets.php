@@ -49,7 +49,7 @@ $termes_type_projet = get_terms(array(
                 <?php if (!is_wp_error($termes_type_projet)) {
                     foreach ($termes_type_projet as $terme_index => $terme) {
                         ?>
-                        <span data-type="<?= $terme->slug ?>" class="<?= $terme_index === 0 ? "active" : "inactive" ?> selector-type hover:cursor-pointer"><?= esc_html($terme->name) ?></span>
+                        <span data-type="<?= $terme->slug ?>" class="<?= $terme_index === 1 ? "active" : "inactive" ?> selector-type hover:cursor-pointer"><?= esc_html($terme->name) ?></span>
 
                         <?php
                         if (count($termes_type_projet) !== $terme_index + 1) {
