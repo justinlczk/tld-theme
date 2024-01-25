@@ -52,7 +52,7 @@ get_header(); ?>
             </div>
 
         </div>
-        <div class="w-3/4 h-1/3 sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-1/2 -translate-y-1/2 z-10">
+        <div class="w-3/4 h-1/2 sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-[55%] sm:top-1/2 -translate-y-1/2 z-10">
             <?php
 
             $images_slider_hero = get_field("background_hero");
