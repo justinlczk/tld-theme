@@ -8873,7 +8873,10 @@ var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap;
 gsapWithCSS.core.Tween;
 document.addEventListener("DOMContentLoaded", function() {
   let words = document.querySelectorAll(".homepage_title .word");
+  let largestWord = 0;
   words.forEach((word, index) => {
+    if (largestWord < word.clientWidth)
+      largestWord = word.clientWidth;
     let tl = gsapWithCSS.timeline({
       delay: (index + 1) * 2,
       // Décalage pour chaque élément
@@ -8901,6 +8904,7 @@ document.addEventListener("DOMContentLoaded", function() {
       translateY: "-100%"
     }, "+=1");
   });
+  document.querySelector(".container-words").style.width = largestWord + "px";
 });
 let imagesSliderHero = document.querySelectorAll(".image-slider-hero");
 let dotsSliderHero = document.querySelectorAll(".dot-slider-hero");

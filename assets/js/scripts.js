@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let words = document.querySelectorAll(".homepage_title .word");
 
+    let largestWord = 0;
+
     words.forEach((word, index) => {
+        if(largestWord < word.clientWidth) largestWord = word.clientWidth;
+
         let tl = gsap.timeline({
             delay: (index + 1) * 2, // Décalage pour chaque élément
             repeat: -1,
@@ -33,6 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 translateY: "-100%",
             }, "+=1"); // Délai avant la disparition
     })
+
+    document.querySelector(".container-words").style.width = largestWord + "px"
 
 });
 
