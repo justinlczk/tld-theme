@@ -16,6 +16,7 @@ get_header(); ?>
 
             <?php
             $title_hero = get_field("titre");
+            var_dump($title_hero);
             $array_hero = explode(",", $title_hero["liste_de_mots"]);
             $end_hero = $title_hero["fin_de_phrase"];
             foreach ($array_hero as &$value) {
