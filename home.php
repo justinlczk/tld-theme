@@ -7,7 +7,11 @@
  *
  */
 
-get_header(); ?>
+get_header();
+$page_id = get_queried_object_id();
+?>
+
+
 
 <section class="hero relative mx-auto min-h-[calc(100svh-64px)] flex flex-col sm:justify-center items-center"
          style="background: linear-gradient(180deg, #E4E4E4 0%, rgba(243, 243, 243, 0.46) 54.17%, #FFF 100%);">
@@ -15,8 +19,7 @@ get_header(); ?>
         <div class="w-[calc(100%-32px)] mx-auto sm:mx-0 sm:w-fit  bg-[#ffffff80] py-4 px-4 sm:py-20 sm:px-24 rounded-3xl sm:rounded-r-3xl backdrop-blur-sm relative z-20">
 
             <?php
-            $title_hero = get_field("titre");
-            var_dump($title_hero);
+            $title_hero = get_field("titre", $page_id);
             $array_hero = explode(",", $title_hero["liste_de_mots"]);
             $end_hero = $title_hero["fin_de_phrase"];
             foreach ($array_hero as &$value) {
