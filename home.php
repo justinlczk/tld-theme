@@ -61,19 +61,20 @@ get_header(); ?>
 
             foreach ($images_slider_hero as $index_image_slider_hero => $image_slider_hero) {
                 ?>
-                <img class="image-slider-hero <?= $index_image_slider_hero === 0 ? "active" : "hidden" ?> object-cover object-center min-h-full min-w-full" src="<?= $image_slider_hero["url"] ?>"
+                <img class="image-slider-hero <?= $index_image_slider_hero === 0 ? "active" : "hidden" ?> object-cover object-center min-h-full min-w-full"
+                     src="<?= $image_slider_hero["url"] ?>"
                      alt="<?= $image_slider_hero["alt"] ?>">
-            <?php
+                <?php
             }
 
             ?>
 
             <div class="absolute flex flex-col gap-2 top-1/2 -translate-y-1/2 right-4">
                 <?php
-                for($i = 0; $i < $count_images_slider_hero; $i++) {
+                for ($i = 0; $i < $count_images_slider_hero; $i++) {
                     ?>
-                <div class="dot-slider-hero <?= $i== 0 ? "bg-primary active" : "bg-[#E5E5E5]" ?> w-4 h-4 rounded-full hover:cursor-pointer"></div>
-                <?php
+                    <div class="dot-slider-hero <?= $i == 0 ? "bg-primary active" : "bg-[#E5E5E5]" ?> w-4 h-4 rounded-full hover:cursor-pointer"></div>
+                    <?php
                 }
                 ?>
             </div>
@@ -222,8 +223,8 @@ get_header(); ?>
             'tax_query' => array(           // Début de la requête de taxonomie
                 array(
                     'taxonomy' => 'type-projet',  // Nom de la taxonomie
-                    'field'    => 'slug',         // Type de champ pour filtrer (ici, le slug de la taxonomie)
-                    'terms'    => 'particuliers' // Le terme de taxonomie à filtrer
+                    'field' => 'slug',         // Type de champ pour filtrer (ici, le slug de la taxonomie)
+                    'terms' => 'particuliers' // Le terme de taxonomie à filtrer
                 )
             )
         ));
@@ -234,8 +235,8 @@ get_header(); ?>
             'tax_query' => array(           // Début de la requête de taxonomie
                 array(
                     'taxonomy' => 'type-projet',  // Nom de la taxonomie
-                    'field'    => 'slug',         // Type de champ pour filtrer (ici, le slug de la taxonomie)
-                    'terms'    => 'professionnels' // Le terme de taxonomie à filtrer
+                    'field' => 'slug',         // Type de champ pour filtrer (ici, le slug de la taxonomie)
+                    'terms' => 'professionnels' // Le terme de taxonomie à filtrer
                 )
             )
         ));
@@ -245,7 +246,8 @@ get_header(); ?>
         <h3 class="text-xl sm:text-3xl flex justify-center items-center gap-4 font-extrabold mt-12 text-center projects-filter"><?php if (!is_wp_error($termes_type_projet)) {
                 foreach ($termes_type_projet as $terme_index => $terme) {
                     ?>
-                    <span data-type="<?= $terme->slug ?>" class="<?= $terme_index === 1 ? "active" : "inactive" ?> selector-type hover:cursor-pointer"><?= esc_html($terme->name) ?></span>
+                    <span data-type="<?= $terme->slug ?>"
+                          class="<?= $terme_index === 1 ? "active" : "inactive" ?> selector-type hover:cursor-pointer"><?= esc_html($terme->name) ?></span>
 
                     <?php
                     if (count($termes_type_projet) !== $terme_index + 1) {
@@ -309,10 +311,10 @@ get_header(); ?>
         <!--<div class="swiper pt-16 slider-projects-home">
             <div class="swiper-wrapper">
                 <?php
-                foreach ($projets_slider_home as $projet_slider_home) {
-                    //var_dump($projet_slider_home);
+        foreach ($projets_slider_home as $projet_slider_home) {
+            //var_dump($projet_slider_home);
 
-                    ?>
+            ?>
 
                     <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
                         <img class="rounded-xl sm:rounded-3xl"
@@ -325,8 +327,8 @@ get_header(); ?>
 
                     <?php
 
-                }
-                ?>
+        }
+        ?>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
@@ -432,11 +434,14 @@ get_header(); ?>
                         <a class="btn before:block before:border before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
                            href="<?= $btn_about_contact["lien"] ?>"><span
                                     class="relative z-10"><?= $btn_about_contact["texte"] ?></span></a>
-                        <a class="flex gap-2 btn border border-black rounded-full py-3 px-6 block w-fit mt-3 text-black uppercase text-xs"
-                           href="<?= $btn_about_cv["lien"] ?>"><span><img src="<?= $btn_about_cv["icone"]["url"] ?>"
-                                                                          alt="<?= $btn_about_cv["icone"]["alt"] ?>"></span><?= $btn_about_cv["texte"] ?>
-                        </a>
-
+                        <?php if ($btn_about_cv != null && isset($btn_about_cv["lien"]) && isset($btn_about_cv["icone"]) && isset($btn_about_cv["texte"])) : ?>
+                            <a
+                            class="flex gap-2 btn border border-black rounded-full py-3 px-6 block w-fit mt-3 text-black uppercase text-xs"
+                            href="<?= $btn_about_cv["lien"] ?>"><span><img src="<?= $btn_about_cv["icone"]["url"] ?>"
+                                                                           alt="<?= $btn_about_cv["icone"]["alt"] ?>">
+                            </span><?= $btn_about_cv["texte"] ?>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -507,8 +512,8 @@ get_header(); ?>
 
 
 <section id="contact"
-        class="flex justify-center items-center bg-right-bottom sm:bg-right bg-[length:100%_auto] sm:bg-[length:auto_90%] bg-no-repeat sm:pt-16"
-        style="background-image: url(<?= get_field("background_contact")["url"] ?>);">
+         class="flex justify-center items-center bg-right-bottom sm:bg-right bg-[length:100%_auto] sm:bg-[length:auto_90%] bg-no-repeat sm:pt-16"
+         style="background-image: url(<?= get_field("background_contact")["url"] ?>);">
     <div class="container min-h-[66vh] grid sm:grid-cols-2 py-12 px-4 sm:px-0">
         <div class="">
             <h2 class="text-3xl sm:text-6xl font-extrabold mb-6 sm:mb-8"><?= get_field("titre_contact"); ?></h2>
