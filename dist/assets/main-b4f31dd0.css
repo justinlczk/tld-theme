@@ -1381,6 +1381,9 @@ html {
 .overflow-visible{
   overflow: visible;
 }
+.overflow-y-visible{
+  overflow-y: visible;
+}
 .rounded-3xl{
   border-radius: 1.5rem;
 }
