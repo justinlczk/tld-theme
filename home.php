@@ -43,7 +43,7 @@ get_header(); ?>
                 <?= get_field("sous-titre") ?>
             </div>
 
-            <div class="sm:w-2/3 text-sm font-normal sm:text-base flex justify-center sm:block text-center sm:text-left">
+            <div class="sm:w-2/3 text-sm font-normal sm:text-base flex flex-col items-center justify-center sm:block text-center sm:text-left">
                 <?= get_field("description") ?>
 
                 <?php $btn_hero = get_field("bouton_hero") ?>
