@@ -109,7 +109,7 @@ get_header();
 if (get_field("brochure_active")) :
     ?>
 
-    <section class="flex items-center justify-center my-6 sm:my-">
+    <section id="pdf" class="flex items-center justify-center my-6 sm:my-">
         <div class="container px-4 sm:px-0">
             <div class="sm:w-1/2">
                 <h2 class="text-3xl sm:text-6xl font-extrabold mb-6 sm:mb-12"><?= get_field("titre_brochure") ?></h2>
@@ -133,7 +133,7 @@ endif;
 if (get_field("perspective_active")) :
     ?>
 
-    <section class="flex items-center justify-center my-12 sm:my-0">
+    <section id="content" class="flex items-center justify-center my-12 sm:my-0">
         <div class="container px-4 sm:px-0">
             <div class="sm:w-1/2">
                 <h2 class="text-3xl sm:text-6xl font-extrabold mb-6 sm:mb-12"><?= get_field("titre_perspective") ?></h2>
@@ -214,6 +214,7 @@ if (get_field("perspective_active")) :
                             }
 
                             case "texte" : {
+                                var_dump($content_perspective);
                                 ?>
                                 <div class=""><?= $content_perspective["texte"] ?></div>
                                 <?php
