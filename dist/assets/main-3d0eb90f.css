@@ -1188,6 +1188,9 @@ html {
 .h-\[45\%\]{
   height: 45%;
 }
+.h-\[55\%\]{
+  height: 55%;
+}
 .max-h-\[50vh\]{
   max-height: 50vh;
 }
