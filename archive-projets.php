@@ -59,7 +59,7 @@ $termes_type_projet = get_terms(array(
                 } ?>
             </h1>
 
-            <div class="swiper w-full pt-16 slider-projects-home slider-projects-home-particuliers">
+            <div class="swiper w-full hidden pt-16 slider-projects-home slider-projects-home-particuliers">
                 <div class="swiper-wrapper">
                     <?php
                     foreach ($projects_particuliers as $projet_slider_home) {
@@ -84,7 +84,7 @@ $termes_type_projet = get_terms(array(
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper w-full hidden pt-16 slider-projects-home slider-projects-home-professionnels">
+            <div class="swiper w-full pt-16 slider-projects-home slider-projects-home-professionnels">
                 <div class="swiper-wrapper">
                     <?php
                     foreach ($projects_professionnels as $projet_slider_home) {
