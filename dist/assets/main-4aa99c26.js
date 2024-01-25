@@ -8907,8 +8907,10 @@ document.addEventListener("DOMContentLoaded", function() {
       translateY: "-100%"
     }, "+=1");
   });
-  document.querySelector(".container-words").style.width = largestWord + "px";
-  document.querySelector(".container-words").style.height = tallerWord + "px";
+  if (document.querySelector(".container-words") != null) {
+    document.querySelector(".container-words").style.width = largestWord + "px";
+    document.querySelector(".container-words").style.height = tallerWord + "px";
+  }
 });
 let imagesSliderHero = document.querySelectorAll(".image-slider-hero");
 let dotsSliderHero = document.querySelectorAll(".dot-slider-hero");
@@ -9030,6 +9032,7 @@ slidersPerspectives.forEach((sliderPerspectives) => {
     pagination: {
       el: ".swiper-pagination"
     },
+    autoplay: true,
     loop: true,
     slidesPerView: 1
   });

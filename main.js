@@ -114,6 +114,7 @@ slidersPerspectives.forEach(sliderPerspectives => {
         pagination: {
             el: '.swiper-pagination',
         },
+        autoplay: true,
         loop: true,
         slidesPerView: 1,
     });

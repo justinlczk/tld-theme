@@ -195,7 +195,7 @@ get_header(); ?>
 
     </div>
 </section>
-<section class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["url"] ?>)">
+<section id="projects" class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["url"] ?>)">
     <div class="container px-4 sm:px-0 mx-auto py-12">
         <h2 class="text-xl sm:text-6xl font-extrabold pb-6">
             <?= get_field("titre_projets") ?>
@@ -376,7 +376,7 @@ get_header(); ?>
 
 </section>
 
-<section>
+<section id="about">
     <div class="container mt-16 mx-auto px-4 sm:px-0">
         <h2 class="text-3xl sm:text-6xl font-extrabold mb-12"><?= get_field("titre_about") ?></h2>
 
@@ -451,7 +451,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="pt-12"
+<section id="expertise" class="pt-12"
          style="background: linear-gradient(180deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #E5E5E5 100%);">
     <div class="container my-12 mx-auto px-4 sm:px-0">
         <div class="sm:w-1/2">

@@ -40,8 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }, "+=1"); // Délai avant la disparition
     })
 
-    document.querySelector(".container-words").style.width = largestWord + "px"
-    document.querySelector(".container-words").style.height = tallerWord + "px"
+    if(document.querySelector(".container-words") != null) {
+        document.querySelector(".container-words").style.width = largestWord + "px"
+        document.querySelector(".container-words").style.height = tallerWord + "px"
+    }
 
 });
 
