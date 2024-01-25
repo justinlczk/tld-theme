@@ -209,7 +209,7 @@ if (get_field("perspective_active")) :
 
                             case "titre": {
                                 ?>
-                                <h2 class="text-3xl sm:text-6xl text-white font-extrabold"><?= $content_perspective["titre"] ?></h2>
+                                <h2 class="text-3xl sm:text-6xl text-black font-extrabold"><?= $content_perspective["titre"] ?></h2>
                                 <?php
                             }
 
