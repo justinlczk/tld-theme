@@ -23,7 +23,7 @@ get_header(); ?>
             }
             ?>
 
-            <h1 class="sm:text-6xl flex flex-col sm:flex-row text-4xl font-extrabold pb-14 sm:pb-6 uppercase homepage_title">
+            <h1 class="sm:text-6xl flex flex-col sm:flex-row text-2xl font-extrabold pb-14 sm:pb-6 uppercase text-center sm:text-left justify-center sm:justify-start homepage_title">
                 <span class="start-title"><?= $end_hero ?></span>
                 <span class="start-title-space hidden sm:block">&nbsp;</span>
                 <span class="container-words">
@@ -39,11 +39,11 @@ get_header(); ?>
                     </span>
             </h1>
 
-            <div class="text-2xl font-extrabold pb-4 uppercase">
+            <div class="text-xl sm:text-2xl text-center sm:text-left font-extrabold pb-4 uppercase ">
                 <?= get_field("sous-titre") ?>
             </div>
 
-            <div class="sm:w-2/3 text-sm font-normal">
+            <div class="sm:w-2/3 text-sm font-normal sm:text-base text-center sm:text-left">
                 <?= get_field("description") ?>
 
                 <?php $btn_hero = get_field("bouton_hero") ?>
@@ -196,7 +196,7 @@ get_header(); ?>
 </section>
 <section class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["url"] ?>)">
     <div class="container px-4 sm:px-0 mx-auto py-12">
-        <h2 class="text-3xl sm:text-6xl font-extrabold pb-6">
+        <h2 class="text-xl sm:text-6xl font-extrabold pb-6">
             <?= get_field("titre_projets") ?>
         </h2>
         <div class="sm:w-1/2">
@@ -506,7 +506,7 @@ get_header(); ?>
 </section>
 
 
-<section
+<section id="contact"
         class="flex justify-center items-center bg-right-bottom sm:bg-right bg-[length:100%_auto] sm:bg-[length:auto_90%] bg-no-repeat sm:pt-16"
         style="background-image: url(<?= get_field("background_contact")["url"] ?>);">
     <div class="container min-h-[66vh] grid sm:grid-cols-2 py-12 px-4 sm:px-0">
