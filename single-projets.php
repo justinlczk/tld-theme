@@ -212,13 +212,14 @@ if (get_field("perspective_active")) :
                                 <h2 class="text-3xl sm:text-6xl text-black font-extrabold"><?= $content_perspective["titre"] ?></h2>
                                 <?php
                             }
+                            break;
 
                             case "texte" : {
-                                var_dump($content_perspective);
                                 ?>
                                 <div class=""><?= $content_perspective["texte"] ?></div>
                                 <?php
                             }
+                            break;
                         }
 
                         ?>
