@@ -23,7 +23,7 @@ get_header(); ?>
             }
             ?>
 
-            <h1 class="sm:text-6xl flex flex-row gap-2 sm:gap-0 sm:flex-row text-2xl font-extrabold pb-14 sm:pb-6 uppercase text-center sm:text-left justify-center sm:justify-start homepage_title">
+            <h1 class="sm:text-6xl flex flex-row gap-2 sm:gap-0 sm:flex-row text-2xl font-extrabold pb-8 sm:pb-6 uppercase text-center sm:text-left justify-center sm:justify-start homepage_title">
                 <span class="start-title"><?= $end_hero ?></span>
                 <span class="start-title-space hidden sm:block">&nbsp;</span>
                 <span class="container-words">
@@ -43,7 +43,7 @@ get_header(); ?>
                 <?= get_field("sous-titre") ?>
             </div>
 
-            <div class="sm:w-2/3 text-sm font-normal sm:text-base text-center sm:text-left">
+            <div class="sm:w-2/3 text-sm font-normal sm:text-base flex justify-center sm:block text-center sm:text-left">
                 <?= get_field("description") ?>
 
                 <?php $btn_hero = get_field("bouton_hero") ?>
