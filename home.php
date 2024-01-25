@@ -256,8 +256,8 @@ get_header(); ?>
                 }
             } ?></h3>
 
-        <div class="swiper w-full hidden pt-16 slider-projects-home slider-projects-home-particuliers">
-            <div class="swiper-wrapper">
+        <div class="swiper w-full hidden pt-16 pb-8 sm:pb-0 slider-projects-home slider-projects-home-particuliers">
+            <div class="swiper-wrapper overflow-visible">
                 <?php
                 foreach ($projects_particuliers as $projet_slider_home) {
                     //var_dump($projet_slider_home);
@@ -281,8 +281,8 @@ get_header(); ?>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper w-full pt-16 slider-projects-home slider-projects-home-professionnels">
-            <div class="swiper-wrapper">
+        <div class="swiper w-full pt-16 pb-8 sm:pb-0 slider-projects-home slider-projects-home-professionnels">
+            <div class="swiper-wrapper overflow-visible">
                 <?php
                 foreach ($projects_professionnels as $projet_slider_home) {
                     //var_dump($projet_slider_home);

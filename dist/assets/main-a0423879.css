@@ -1378,6 +1378,9 @@ html {
 .overflow-hidden{
   overflow: hidden;
 }
+.overflow-visible{
+  overflow: visible;
+}
 .rounded-3xl{
   border-radius: 1.5rem;
 }
@@ -2175,6 +2178,9 @@ footer .menu-menu-container ul li span {
   }
   .sm\:pt-16{
     padding-top: 4rem;
+  }
+  .sm\:pb-0{
+    padding-bottom: 0px;
   }
   .sm\:text-left{
     text-align: left;
