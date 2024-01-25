@@ -1185,6 +1185,9 @@ html {
 .h-1\/2{
   height: 50%;
 }
+.h-\[45\%\]{
+  height: 45%;
+}
 .max-h-\[50vh\]{
   max-height: 50vh;
 }
@@ -1301,6 +1304,9 @@ html {
 }
 .grid-cols-\[64px\2c 1fr\]{
   grid-template-columns: 64px 1fr;
+}
+.flex-row{
+  flex-direction: row;
 }
 .flex-col{
   flex-direction: column;

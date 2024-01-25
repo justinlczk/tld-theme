@@ -23,7 +23,7 @@ get_header(); ?>
             }
             ?>
 
-            <h1 class="sm:text-6xl flex flex-col sm:flex-row text-xl font-extrabold pb-14 sm:pb-6 uppercase text-center sm:text-left justify-center sm:justify-start homepage_title">
+            <h1 class="sm:text-6xl flex flex-row sm:flex-row text-xl font-extrabold pb-14 sm:pb-6 uppercase text-center sm:text-left justify-center sm:justify-start homepage_title">
                 <span class="start-title"><?= $end_hero ?></span>
                 <span class="start-title-space hidden sm:block">&nbsp;</span>
                 <span class="container-words">
@@ -52,7 +52,7 @@ get_header(); ?>
             </div>
 
         </div>
-        <div class="w-[calc(100%-16px)] sm:w-3/4 h-1/2 sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-[60%] sm:top-1/2 -translate-y-1/2 z-10">
+        <div class="w-[calc(100%-16px)] sm:w-3/4 h-[45%] sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-[60%] sm:top-1/2 -translate-y-1/2 z-10">
             <?php
 
             $images_slider_hero = get_field("background_hero");
