@@ -380,7 +380,7 @@ get_header();
 </section>
 
 <section id="expertise" class="pt-12"
-         style="background: linear-gradient(180deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #E5E5E5 100%);">
+         style="background: linear-gradient(0deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #E5E5E5 100%);">
     <div class="container my-12 mx-auto px-4 sm:px-0">
         <div class="sm:w-1/2">
             <h2 class="text-3xl sm:text-6xl font-extrabold mb-8"><?= get_field("titre_expertise") ?></h2>
