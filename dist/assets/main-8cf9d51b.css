@@ -1002,6 +1002,9 @@ html {
 .top-\[55\%\]{
   top: 55%;
 }
+.top-\[63\%\]{
+  top: 63%;
+}
 .z-10{
   z-index: 10;
 }
@@ -1108,6 +1111,9 @@ html {
 }
 .mt-8{
   margin-top: 2rem;
+}
+.mt-2{
+  margin-top: 0.5rem;
 }
 .block{
   display: block;

@@ -55,7 +55,7 @@ get_header();
             </div>
 
         </div>
-        <div class="w-[calc(100%-16px)] sm:w-3/4 h-[50%] sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-[55%] sm:top-1/2 -translate-y-1/2 z-10">
+        <div class="w-[calc(100%-16px)] sm:w-3/4 h-[50%] sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-[63%] sm:top-1/2 -translate-y-1/2 z-10">
             <?php
 
             $images_slider_hero = get_field("background_hero");
@@ -65,7 +65,7 @@ get_header();
             foreach ($images_slider_hero as $index_image_slider_hero => $image_slider_hero) {
                 ?>
                 <img class="image-slider-hero <?= $index_image_slider_hero === 0 ? "active" : "hidden" ?> object-cover object-center min-h-full min-w-full"
-                     src="<?= $image_slider_hero["url"] ?>"
+                     src="<?= $image_slider_hero["size"]["large"]["url"] ?>"
                      alt="<?= $image_slider_hero["alt"] ?>">
                 <?php
             }
@@ -246,7 +246,7 @@ get_header();
 
         ?>
 
-        <h3 class="text-xl sm:text-3xl flex justify-center items-center gap-4 font-extrabold mt-12 text-center projects-filter"><?php if (!is_wp_error($termes_type_projet)) {
+        <h3 class="text-xl sm:text-3xl flex justify-center items-center gap-4 font-extrabold mt-2 text-center projects-filter"><?php if (!is_wp_error($termes_type_projet)) {
                 foreach ($termes_type_projet as $terme_index => $terme) {
                     ?>
                     <span data-type="<?= $terme->slug ?>"
