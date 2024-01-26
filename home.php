@@ -379,6 +379,53 @@ get_header();
 
 </section>
 
+<section id="expertise" class="pt-12"
+         style="background: linear-gradient(180deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #E5E5E5 100%);">
+    <div class="container my-12 mx-auto px-4 sm:px-0">
+        <div class="sm:w-1/2">
+            <h2 class="text-3xl sm:text-6xl font-extrabold mb-8"><?= get_field("titre_expertise") ?></h2>
+            <div><?= get_field("description_expertise") ?></div>
+        </div>
+
+        <div class="bg-white grid sm:grid-cols-2 rounded-3xl p-4 sm:p-12 gap-6 mt-10 sm:mt-16">
+            <?php
+            $contents_expertise = get_field("expertise_contenu");
+            foreach ($contents_expertise as $content_expertise) {
+                ?>
+
+                <div class="grid grid-cols-[48px,auto] sm:grid-cols-[64px,auto] gap-4 sm:gap-8">
+                    <div class="w-full bg-[#D9D9D9] rounded-full p-4 flex items-center justify-center aspect-square">
+                        <img class="w-full" src="<?= $content_expertise["icone"]["url"] ?>"
+                             alt="<?= $content_expertise["icone"]["alt"] ?>">
+                    </div>
+                    <div>
+                        <h3 class="uppercase sm:text-xl font-bold mb-2 sm:mb-4"><?= $content_expertise["titre"] ?></h3>
+                        <div class="text-xs sm:text-base"><?= $content_expertise["texte"] ?></div>
+                    </div>
+
+                </div>
+
+                <?php
+            }
+            ?>
+        </div>
+
+        <div class="flex gap-4 sm:gap-6 mt-6 flex-wrap">
+            <?php
+            $btn_expertise_contact = get_field("bouton_contact_expertise");
+            $btn_expertise_projects = get_field("bouton_projets_expertise");
+            ?>
+
+            <a class="btn before:block before:border before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:transition-all before:transition-200 ease-in hover:before:blur-[8px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
+               href="<?= $btn_expertise_contact["lien"] ?>"><span
+                        class="relative z-10"><?= $btn_expertise_contact["texte"] ?></span></a>
+            <a class="btn border border-black rounded-full py-3 px-6 block w-fit mt-3 text-black uppercase text-xs"
+               href="<?= $btn_expertise_projects["lien"] ?>"><?= $btn_expertise_projects["texte"] ?>
+            </a>
+        </div>
+    </div>
+</section>
+
 <section id="about">
     <div class="container mt-16 mx-auto px-4 sm:px-0">
         <h2 class="text-3xl sm:text-6xl font-extrabold mb-12"><?= get_field("titre_about") ?></h2>
@@ -454,52 +501,7 @@ get_header();
     </div>
 </section>
 
-<section id="expertise" class="pt-12"
-         style="background: linear-gradient(180deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #E5E5E5 100%);">
-    <div class="container my-12 mx-auto px-4 sm:px-0">
-        <div class="sm:w-1/2">
-            <h2 class="text-3xl sm:text-6xl font-extrabold mb-8"><?= get_field("titre_expertise") ?></h2>
-            <div><?= get_field("description_expertise") ?></div>
-        </div>
 
-        <div class="bg-white grid sm:grid-cols-2 rounded-3xl p-4 sm:p-12 gap-6 mt-10 sm:mt-16">
-            <?php
-            $contents_expertise = get_field("expertise_contenu");
-            foreach ($contents_expertise as $content_expertise) {
-                ?>
-
-                <div class="grid grid-cols-[48px,auto] sm:grid-cols-[64px,auto] gap-4 sm:gap-8">
-                    <div class="w-full bg-[#D9D9D9] rounded-full p-4 flex items-center justify-center aspect-square">
-                        <img class="w-full" src="<?= $content_expertise["icone"]["url"] ?>"
-                             alt="<?= $content_expertise["icone"]["alt"] ?>">
-                    </div>
-                    <div>
-                        <h3 class="uppercase sm:text-xl font-bold mb-2 sm:mb-4"><?= $content_expertise["titre"] ?></h3>
-                        <div class="text-xs sm:text-base"><?= $content_expertise["texte"] ?></div>
-                    </div>
-
-                </div>
-
-                <?php
-            }
-            ?>
-        </div>
-
-        <div class="flex gap-4 sm:gap-6 mt-6 flex-wrap">
-            <?php
-            $btn_expertise_contact = get_field("bouton_contact_expertise");
-            $btn_expertise_projects = get_field("bouton_projets_expertise");
-            ?>
-
-            <a class="btn before:block before:border before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:transition-all before:transition-200 ease-in hover:before:blur-[8px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
-               href="<?= $btn_expertise_contact["lien"] ?>"><span
-                        class="relative z-10"><?= $btn_expertise_contact["texte"] ?></span></a>
-            <a class="btn border border-black rounded-full py-3 px-6 block w-fit mt-3 text-black uppercase text-xs"
-               href="<?= $btn_expertise_projects["lien"] ?>"><?= $btn_expertise_projects["texte"] ?>
-            </a>
-        </div>
-    </div>
-</section>
 
 <section class="container mx-auto py-16 sm:py-0 sm:min-h-[66vh] flex justify-center items-center bg-center bg-cover"
          style="background-image: linear-gradient(90deg, #222222, #00000000), url(<?= get_field("image_background")["url"] ?>);">
@@ -513,6 +515,49 @@ get_header();
     </div>
 </section>
 
+
+<section class="flex justify-center items-center py-12 sm:py-24"
+         style="background: linear-gradient(180deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #FFF 100%);">
+    <div class="container flex flex-col px-4 sm:px-0">
+        <h2 class="text-3xl sm:text-6xl font-extrabold mb-12"><?= esc_html(get_option("title_section_temoignages", "Témoignages.")) ?></h2>
+
+        <div class="slider-testimonial swiper w-full h-fit flex flex-col gap-6">
+            <div class="swiper-wrapper">
+
+                <?php
+
+                $testimonials = get_posts(array(
+                    "post_type" => "temoignages",
+                    "numberposts" => -1
+                ));
+
+                foreach ($testimonials as $testimonial) {
+                    setup_postdata($testimonial);
+                    ?>
+
+                    <div class="swiper-slide bg-white p-12 rounded-3xl">
+                        <div class="mb-6 text-xs">
+                            <?= get_field("contenu", $testimonial->ID) ?>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <div class="line h-px w-12 bg-primary"></div>
+                            <p><strong><?= get_field("nom_prenom", $testimonial->ID) ?>
+                                    ,</strong> <?= get_field("fonction", $testimonial->ID) ?></p>
+                        </div>
+                    </div>
+                    <?php
+                    wp_reset_postdata();
+                }
+                ?>
+
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section>
 
 <section id="contact"
          class="flex justify-center items-center bg-right-bottom sm:bg-right bg-[length:100%_auto] sm:bg-[length:auto_90%] bg-no-repeat sm:pt-16"
@@ -562,5 +607,7 @@ get_header();
         </div>
     </div>
 </section>
+
+
 
 <?php get_footer(); ?>
