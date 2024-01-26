@@ -1091,9 +1091,6 @@ html {
 .mt-10{
   margin-top: 2.5rem;
 }
-.mt-12{
-  margin-top: 3rem;
-}
 .mt-16{
   margin-top: 4rem;
 }
@@ -1154,9 +1151,6 @@ html {
 .h-\[50\%\]{
   height: 50%;
 }
-.h-\[50svh\]{
-  height: 50svh;
-}
 .h-auto{
   height: auto;
 }
@@ -1172,9 +1166,6 @@ html {
 }
 .h-screen{
   height: 100vh;
-}
-.h-svh{
-  height: 100svh;
 }
 .max-h-\[25vh\]{
   max-height: 25vh;
@@ -1384,6 +1375,9 @@ html {
   --tw-border-opacity: 1;
   border-color: rgb(236 90 58 / var(--tw-border-opacity));
 }
+.bg-\[\#\#ffffff3d\]{
+  background-color: ##ffffff3d;
+}
 .bg-\[\#D9D9D9\]{
   --tw-bg-opacity: 1;
   background-color: rgb(217 217 217 / var(--tw-bg-opacity));
@@ -1407,10 +1401,6 @@ html {
   --tw-bg-opacity: 1;
   background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
-.bg-slate-700{
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
-}
 .bg-slate-800{
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
@@ -1421,12 +1411,6 @@ html {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-\[\#0000003B\]{
-  background-color: #0000003B;
-}
-.bg-\[\#\#ffffff3d\]{
-  background-color: ##ffffff3d;
 }
 .bg-\[length\:100\%_auto\]{
   background-size: 100% auto;
@@ -1658,6 +1642,9 @@ body.admin-bar {
   text-transform: uppercase;
   font-family: "Montserrat";
   font-size: 14px;
+}
+.menu-menu-container ul li:hover {
+  color: var(--primary);
 }
 @media screen and (max-width: 640px) {
   .menu-menu-container ul {
@@ -2014,6 +2001,9 @@ footer .menu-menu-container ul li span {
   .sm\:mt-0{
     margin-top: 0px;
   }
+  .sm\:mt-12{
+    margin-top: 3rem;
+  }
   .sm\:mt-16{
     margin-top: 4rem;
   }
@@ -2037,9 +2027,6 @@ footer .menu-menu-container ul li span {
   }
   .sm\:h-3\/4{
     height: 75%;
-  }
-  .sm\:h-\[75svh\]{
-    height: 75svh;
   }
   .sm\:min-h-\[66vh\]{
     min-height: 66vh;

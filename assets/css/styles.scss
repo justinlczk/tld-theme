@@ -52,6 +52,10 @@ body.admin-bar {
     font-family: "Montserrat";
     font-size: 14px;
 
+    li:hover {
+      color: var(--primary);
+    }
+
     @media screen and (max-width: 640px) {
       flex-direction: column;
       flex-wrap: wrap;

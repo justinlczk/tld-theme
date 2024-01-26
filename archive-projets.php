@@ -45,7 +45,7 @@ $termes_type_projet = get_terms(array(
 
             <div class="w-full h-auto pb-12 flex gap-6 flex-col items-center justify-center">
 
-            <h1 class="text-xl sm:text-6xl flex justify-center items-center gap-4 font-extrabold mt-12 text-center projects-filter">
+            <h1 class="text-xl sm:text-6xl flex justify-center items-center gap-4 font-extrabold mt-6 sm:mt-12 text-center projects-filter">
                 <?php if (!is_wp_error($termes_type_projet)) {
                     foreach ($termes_type_projet as $terme_index => $terme) {
                         ?>
