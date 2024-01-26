@@ -43,7 +43,7 @@ $termes_type_projet = get_terms(array(
     <section class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["sizes"]["large"] ?>)">
 
 
-            <div class="w-full h-[50svh] sm:h-[75svh] flex gap-6 flex-col items-center justify-center">
+            <div class="w-full h-auto flex gap-6 flex-col items-center justify-center">
 
             <h1 class="text-xl sm:text-6xl flex justify-center items-center gap-4 font-extrabold mt-12 text-center projects-filter">
                 <?php if (!is_wp_error($termes_type_projet)) {
