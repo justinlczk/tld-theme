@@ -341,7 +341,7 @@ get_header();
     </div>
 
     <div class="flex items-center justify-center pb-12">
-        <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
+        <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:transition-all before:transition-200 ease-in hover:before:blur-[8px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
            href="<?= site_url() ?>/projets"><span
                     class="relative z-10">Tous les projets</span></a>
     </div>
@@ -434,7 +434,7 @@ get_header();
                         $btn_about_cv = get_field("bouton_cv_about");
                         ?>
 
-                        <a class="btn before:block before:border before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
+                        <a class="btn before:block before:border before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:transition-all before:transition-200 ease-in hover:before:blur-[8px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
                            href="<?= $btn_about_contact["lien"] ?>"><span
                                     class="relative z-10"><?= $btn_about_contact["texte"] ?></span></a>
                         <?php if ($btn_about_cv != null && isset($btn_about_cv["lien"]) && $btn_about_cv["lien"] != null && isset($btn_about_cv["icone"]) && isset($btn_about_cv["texte"]) && $btn_about_cv["texte"] != null) : ?>
@@ -491,7 +491,7 @@ get_header();
             $btn_expertise_projects = get_field("bouton_projets_expertise");
             ?>
 
-            <a class="btn before:block before:border before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
+            <a class="btn before:block before:border before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:transition-all before:transition-200 ease-in hover:before:blur-[8px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
                href="<?= $btn_expertise_contact["lien"] ?>"><span
                         class="relative z-10"><?= $btn_expertise_contact["texte"] ?></span></a>
             <a class="btn border border-black rounded-full py-3 px-6 block w-fit mt-3 text-black uppercase text-xs"

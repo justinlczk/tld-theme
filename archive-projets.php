@@ -128,7 +128,7 @@ $termes_type_projet = get_terms(array(
                 <p class="mb-8">
                     <?= esc_html(get_option("content_section_premier_visuel", "Découvrez notre expertise en design 3D : Cliquez ici pour obtenir votre premier visuel offert ! Si vous êtes intéressé, envoyez-moi simplement un plan accompagné d'une description de vos attentes en termes de visuels. Je vous enverrai votre première création sous un délai d'une semaine, vous permettant ainsi d'apprécier la qualité et le réalisme de mes réalisations, et de voir en quoi nos services peuvent transformer vos espaces et booster vos ventes immobilières.")) ?>
                 </p>
-                <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
+                <a class="btn before:block before:border uppercase before:border-primary before:rounded-full before:bg-primary before:blur-[2px] before:transition-all before:transition-200 ease-in hover:before:blur-[8px] before:absolute before:w-full before:top-1/2 before:left-1/2 before:-translate-y-1/2 before:-translate-x-1/2 before:z-0 before:h-full relative py-3 px-6 block w-fit mt-3 text-white uppercase text-xs"
                    href="<?= esc_url(get_option("url_section_premier_visuel", site_url()."#contact")) ?>/projets"><span
                             class="relative z-10"><?= esc_html(get_option("btn_section_premier_visuel", "ME CONTACTER")) ?></span></a>
             </div>
