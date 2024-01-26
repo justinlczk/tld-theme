@@ -45,13 +45,12 @@ body.admin-bar {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 24px;
+    gap: 32px;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     font-family: "Montserrat";
-    font-size: 12px;
-
+    font-size: 14px;
 
     @media screen and (max-width: 640px) {
       flex-direction: column;

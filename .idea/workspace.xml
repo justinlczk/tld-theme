@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="1a5478a8-8ae2-4bd2-bda7-e631a0dafe0f" name="Changes" comment="Add scss compatibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive-projets.php" beforeDir="false" afterPath="$PROJECT_DIR$/archive-projets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/single-projets.php" beforeDir="false" afterPath="$PROJECT_DIR$/single-projets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/main-a695e3ed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/assets/main-ba725e6d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,7 @@
       <workItem from="1702939779404" duration="1170000" />
       <workItem from="1703961854423" duration="4180000" />
       <workItem from="1704033036960" duration="15000" />
-      <workItem from="1705922908469" duration="28496000" />
+      <workItem from="1705922908469" duration="28855000" />
     </task>
     <task id="LOCAL-00001" summary="Add scss compatibility">
       <created>1702938275490</created>

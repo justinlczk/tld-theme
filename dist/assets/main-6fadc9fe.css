@@ -999,9 +999,6 @@ html {
 .top-4{
   top: 1rem;
 }
-.top-\[55\%\]{
-  top: 55%;
-}
 .top-\[63\%\]{
   top: 63%;
 }
@@ -1100,6 +1097,9 @@ html {
 .mt-16{
   margin-top: 4rem;
 }
+.mt-2{
+  margin-top: 0.5rem;
+}
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -1111,9 +1111,6 @@ html {
 }
 .mt-8{
   margin-top: 2rem;
-}
-.mt-2{
-  margin-top: 0.5rem;
 }
 .block{
   display: block;
@@ -1151,6 +1148,9 @@ html {
 .h-6{
   height: 1.5rem;
 }
+.h-8{
+  height: 2rem;
+}
 .h-\[50\%\]{
   height: 50%;
 }
@@ -1175,9 +1175,6 @@ html {
 }
 .h-svh{
   height: 100svh;
-}
-.h-8{
-  height: 2rem;
 }
 .max-h-\[25vh\]{
   max-height: 25vh;
@@ -1523,9 +1520,6 @@ html {
 .pb-8{
   padding-bottom: 2rem;
 }
-.pt-12{
-  padding-top: 3rem;
-}
 .pt-16{
   padding-top: 4rem;
 }
@@ -1647,12 +1641,12 @@ body.admin-bar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  gap: 24px;
+  gap: 32px;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
   font-family: "Montserrat";
-  font-size: 12px;
+  font-size: 14px;
 }
 @media screen and (max-width: 640px) {
   .menu-menu-container ul {

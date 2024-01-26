@@ -9108,4 +9108,10 @@ togglesMobileMenu.forEach((toggleMobileMenu) => {
     document.querySelector(".menu-mobile").classList.toggle("hidden");
     document.querySelector(".menu-mobile").classList.toggle("flex");
   });
+  document.querySelectorAll(".menu-menu-container a").forEach((el) => {
+    el.addEventListener("click", () => {
+      document.querySelector(".menu-mobile").classList.toggle("hidden");
+      document.querySelector(".menu-mobile").classList.toggle("flex");
+    });
+  });
 });
