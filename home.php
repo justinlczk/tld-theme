@@ -379,7 +379,7 @@ get_header();
 
 </section>
 
-<section id="expertise" class="pt-12"
+<section id="expertise" class="py-12"
          style="background: linear-gradient(0deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #E5E5E5 100%);">
     <div class="container my-12 mx-auto px-4 sm:px-0">
         <div class="sm:w-1/2">
@@ -426,7 +426,7 @@ get_header();
     </div>
 </section>
 
-<section id="about">
+<section id="about" class="pb-6">
     <div class="container mt-16 mx-auto px-4 sm:px-0">
         <h2 class="text-3xl sm:text-6xl font-extrabold mb-12"><?= get_field("titre_about") ?></h2>
 
