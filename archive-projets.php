@@ -40,7 +40,7 @@ $termes_type_projet = get_terms(array(
 
 ?>
 
-    <section class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["url"] ?>)">
+    <section class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["sizes"]["large"] ?>)">
 
 
             <div class="w-full h-[50svh] sm:h-[75svh] flex gap-6 flex-col items-center justify-center">
@@ -69,7 +69,7 @@ $termes_type_projet = get_terms(array(
 
                         <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
                             <img class="rounded-xl sm:rounded-3xl"
-                                 src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                                 src="<?= get_field("image_miniature", $projet_slider_home->ID)["sizes"]["large"] ?>"
                                  alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
                             <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
                             <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>
@@ -94,7 +94,7 @@ $termes_type_projet = get_terms(array(
 
                         <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
                             <img class="rounded-xl sm:rounded-3xl"
-                                 src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                                 src="<?= get_field("image_miniature", $projet_slider_home->ID)["sizes"]["large"] ?>"
                                  alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
                             <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
                             <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>

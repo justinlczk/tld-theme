@@ -198,7 +198,7 @@ get_header();
 
     </div>
 </section>
-<section id="projects" class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["url"] ?>)">
+<section id="projects" class="bg-cover bg-center" style="background-image: url(<?= get_field("image_fond_slider")["sizes"]["large"] ?>)">
     <div class="container px-4 sm:px-0 mx-auto py-12">
         <h2 class="text-xl sm:text-6xl font-extrabold pb-6">
             <?= get_field("titre_projets") ?>
@@ -294,7 +294,7 @@ get_header();
 
                     <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
                         <img class="rounded-xl sm:rounded-3xl"
-                             src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                             src="<?= get_field("image_miniature", $projet_slider_home->ID)["sizes"]["large"] ?>"
                              alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
                         <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
                         <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>
@@ -321,7 +321,7 @@ get_header();
 
                     <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
                         <img class="rounded-xl sm:rounded-3xl"
-                             src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                             src="<?= get_field("image_miniature", $projet_slider_home->ID)["sizes"]["large"] ?>"
                              alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
                         <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
                         <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>
@@ -367,7 +367,7 @@ get_header();
 
         foreach ($images_section as $index => $image_section) {
             $size = $image_section["taille"];
-            $url = $image_section["image"]["url"];
+            $url = $image_section["image"]["sizes"]["large"];
             $alt = $image_section["image"]["alt"];
 
             echo "<img class='col-span-$size max-h-[50vh] w-full object-cover' src='$url' alt='$alt' />";
@@ -395,7 +395,7 @@ get_header();
 
                 <div class="grid grid-cols-[48px,auto] sm:grid-cols-[64px,auto] gap-4 sm:gap-8">
                     <div class="w-full bg-[#D9D9D9] rounded-full p-4 flex items-center justify-center aspect-square">
-                        <img class="w-full" src="<?= $content_expertise["icone"]["url"] ?>"
+                        <img class="w-full" src="<?= $content_expertise["icone"]["sizes"]["large"] ?>"
                              alt="<?= $content_expertise["icone"]["alt"] ?>">
                     </div>
                     <div>
@@ -435,7 +435,7 @@ get_header();
                 <div><?= get_field("texte_colonne_1") ?></div>
                 <div class="flex items-end">
                     <?php $image_about = get_field("image_about"); ?>
-                    <img class="sm:w-2/3 object-contain object-bottom" src="<?= $image_about["url"] ?>"
+                    <img class="sm:w-2/3 object-contain object-bottom" src="<?= $image_about["sizes"]["large"] ?>"
                          alt="<?= $image_about["alt"] ?>">
                 </div>
             </div>
@@ -460,7 +460,7 @@ get_header();
                             ?>
                             <div class="<?= $count == 1 ? "sm:justify-self-start " : "" ?><?= $count == 2 ? "sm:justify-self-center " : "" ?><?= $count == 3 ? "sm:justify-self-end " : "" ?><?= $ability_index % 2 == 0 ? "justify-self-start " : "justify-self-end " ?>flex w-32 items-center justify-center gap-2 flex-col">
                                 <div class="bg-[#D9D9D9] p-8 rounded-full">
-                                    <img class="w-8" src="<?= $ability["image"]["url"] ?>"
+                                    <img class="w-8" src="<?= $ability["image"]["sizes"]["large"] ?>"
                                          alt="<?= $ability["image"]["alt"] ?>">
                                 </div>
 
@@ -504,7 +504,7 @@ get_header();
 
 
 <section class="container mx-auto py-16 sm:py-0 sm:min-h-[66vh] flex justify-center items-center bg-center bg-cover"
-         style="background-image: linear-gradient(90deg, #222222, #00000000), url(<?= get_field("image_background")["url"] ?>);">
+         style="background-image: linear-gradient(90deg, #222222, #00000000), url(<?= get_field("image_background")["sizes"]["large"] ?>);">
     <div class="px-4 sm:px-12">
         <div class="sm:w-1/2 flex flex-col sm:px-6">
             <h2 class="text-3xl sm:text-6xl text-white font-extrabold mb-8"><?= get_field("titre_pro_particulier") ?></h2>
@@ -560,7 +560,7 @@ get_header();
 
 <section id="contact"
          class="flex justify-center items-center bg-right-bottom sm:bg-right bg-[length:100%_auto] sm:bg-[length:auto_90%] bg-no-repeat sm:pt-16"
-         style="background-image: url(<?= get_field("background_contact")["url"] ?>);">
+         style="background-image: url(<?= get_field("background_contact")["sizes"]["large"] ?>);">
     <div class="container min-h-[66vh] grid sm:grid-cols-2 py-12 px-4 sm:px-0">
         <div class="">
             <h2 class="text-3xl sm:text-6xl font-extrabold mb-6 sm:mb-8"><?= get_field("titre_contact"); ?></h2>

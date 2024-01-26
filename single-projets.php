@@ -30,7 +30,7 @@ get_header();
                     ?>
 
                     <div class="grid grid-cols-[24px,1fr] gap-4">
-                        <img class="w-full" src="<?= $skill["icone"]["url"] ?>" alt="<?= $skill["icone"]["url"] ?>">
+                        <img class="w-full" src="<?= $skill["icone"]["url"] ?>" alt="<?= $skill["icone"]["alt"] ?>">
                         <p class="uppercase"><?= $skill["texte"] ?></p>
                     </div>
 
@@ -53,7 +53,7 @@ get_header();
 
                 foreach ($slides_project as $slide_project) {
                     ?>
-                    <img class="swiper-slide w-full object-contain" src="<?= $slide_project["url"] ?>" alt="<?= $slide_project["alt"] ?>">
+                    <img class="swiper-slide w-full object-contain" src="<?= $slide_project["sizes"]["large"] ?>" alt="<?= $slide_project["alt"] ?>">
                     <?php
                 }
 
@@ -191,7 +191,7 @@ if (get_field("perspective_active")) :
 
                             case "image" :
                                 ?>
-                                <img class="w-full" src="<?= $content_perspective["image"]["url"] ?>"
+                                <img class="w-full" src="<?= $content_perspective["image"]["sizes"]["large"] ?>"
                                      alt="<?= $content_perspective["image"]["alt"] ?>">
                                 <?php
                                 break;
