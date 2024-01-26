@@ -516,8 +516,7 @@ get_header();
 </section>
 
 
-<section class="flex justify-center items-center py-12 sm:py-24"
-         style="background: linear-gradient(180deg, #CDCDCD 0%, rgba(243, 243, 243, 0.46) 54.17%, #FFF 100%);">
+<section class="flex justify-center items-center py-12 sm:py-24">
     <div class="container flex flex-col px-4 sm:px-0">
         <h2 class="text-3xl sm:text-6xl font-extrabold mb-12"><?= esc_html(get_option("title_section_temoignages", "Témoignages.")) ?></h2>
 
