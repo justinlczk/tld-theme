@@ -64,40 +64,10 @@ get_header();
             <div class="swiper-pagination"></div>
 
             <div class="swiper-button-next z-10 hover:cursor-pointer w-10 h-10 absolute top-1/2 right-0 -translate-y-1/2 sm:-translate-x-1/2">
-                <svg class="w-full h-auto" width="31" height="31" viewBox="0 0 31 31" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <g id="fleche" clip-path="url(#clip0_307_1272)">
-                        <g id="Layer_1">
-                            <path id="Vector"
-                                  d="M1.65647 13.8724L24.971 13.8961L13.2574 2.18372L15.4408 0.000352271L30.8812 15.4408L15.4408 30.8825L13.253 28.6947L24.9738 16.9752L1.56887 16.9506"
-                                  fill="black"/>
-                        </g>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_307_1272">
-                            <rect width="21.8369" height="21.8369" fill="white"
-                                  transform="translate(30.8818 15.4414) rotate(135)"/>
-                        </clipPath>
-                    </defs>
-                </svg>
+
             </div>
             <div class="swiper-button-prev sm:hidden z-10 hover:cursor-pointer w-10 h-10 absolute top-1/2 left-0 -translate-y-1/2 rotate-180">
-                <svg class="w-full h-auto" width="31" height="31" viewBox="0 0 31 31" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <g id="fleche" clip-path="url(#clip0_307_1272)">
-                        <g id="Layer_1">
-                            <path id="Vector"
-                                  d="M1.65647 13.8724L24.971 13.8961L13.2574 2.18372L15.4408 0.000352271L30.8812 15.4408L15.4408 30.8825L13.253 28.6947L24.9738 16.9752L1.56887 16.9506"
-                                  fill="black"/>
-                        </g>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_307_1272">
-                            <rect width="21.8369" height="21.8369" fill="white"
-                                  transform="translate(30.8818 15.4414) rotate(135)"/>
-                        </clipPath>
-                    </defs>
-                </svg>
+                
             </div>
 
         </div>
