@@ -1425,6 +1425,9 @@ html {
 .bg-\[\#0000003B\]{
   background-color: #0000003B;
 }
+.bg-\[\#\#ffffff3d\]{
+  background-color: ##ffffff3d;
+}
 .bg-\[length\:100\%_auto\]{
   background-size: 100% auto;
 }
