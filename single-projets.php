@@ -66,8 +66,8 @@ get_header();
             <div class="swiper-button-next z-10 hover:cursor-pointer w-10 h-10 absolute top-1/2 right-0 -translate-y-1/2 sm:-translate-x-1/2">
 
             </div>
-            <div class="swiper-button-prev sm:hidden z-10 hover:cursor-pointer w-10 h-10 absolute top-1/2 left-0 -translate-y-1/2 rotate-180">
-                
+            <div class="swiper-button-prev z-10 hover:cursor-pointer w-10 h-10 absolute top-1/2 left-0 -translate-y-1/2">
+
             </div>
 
         </div>
