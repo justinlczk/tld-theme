@@ -65,7 +65,7 @@ get_header();
             foreach ($images_slider_hero as $index_image_slider_hero => $image_slider_hero) {
                 ?>
                 <img class="image-slider-hero <?= $index_image_slider_hero === 0 ? "active" : "hidden" ?> object-cover object-center min-h-full min-w-full"
-                     src="<?= $image_slider_hero["size"]["large"]["url"] ?>"
+                     src="<?= $image_slider_hero["sizes"]["large"]["url"] ?>"
                      alt="<?= $image_slider_hero["alt"] ?>">
                 <?php
             }
