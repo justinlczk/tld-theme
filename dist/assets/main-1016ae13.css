@@ -1632,6 +1632,9 @@ body.admin-bar {
   --swiper-pagination-color: #EB5939;
   --primary: #EB5939;
 }
+h2 sup {
+  font-size: 1rem;
+}
 .menu-menu-container ul {
   display: flex;
   flex-direction: row;
