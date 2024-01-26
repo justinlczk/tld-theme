@@ -262,7 +262,7 @@ endif;
                     <p class="font-semibold" ><?= get_option("numero_telephone") ?></p>
                 </a>
 
-                <a href="tel:<?= get_option("email_contact") ?>" class="flex gap-4 items-center">
+                <a href="mailto:<?= get_option("email_contact") ?>" class="flex gap-4 items-center">
                     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-[#D9D9D9]">
                         <svg class="w-4 h-auto" xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
                             <path d="M0.354934 3.34533C2.68812 5.43751 6.78213 9.1183 7.98541 10.266C8.14694 10.4209 8.3202 10.4996 8.50006 10.4996C8.67955 10.4996 8.85251 10.4216 9.01368 10.2675C10.218 9.11865 14.312 5.43751 16.6452 3.34533C16.7905 3.21532 16.8126 2.9868 16.695 2.82786C16.4232 2.46059 16.0178 2.25 15.5834 2.25H1.41674C0.98234 2.25 0.576963 2.46059 0.305129 2.8279C0.187523 2.9868 0.20967 3.21532 0.354934 3.34533Z" fill="black"/>

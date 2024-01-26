@@ -55,7 +55,7 @@ get_header();
             </div>
 
         </div>
-        <div class="w-[calc(100%-16px)] sm:w-3/4 h-[45%] sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-[55%] sm:top-1/2 -translate-y-1/2 z-10">
+        <div class="w-[calc(100%-16px)] sm:w-3/4 h-[50%] sm:h-3/4 rounded-l-3xl overflow-hidden absolute right-0 top-[55%] sm:top-1/2 -translate-y-1/2 z-10">
             <?php
 
             $images_slider_hero = get_field("background_hero");
@@ -83,7 +83,7 @@ get_header();
             </div>
         </div>
     </div>
-    <svg class="w-24 h-24 absolute bottom-4 sm:bottom-10 left-4 sm:left-10" xmlns="http://www.w3.org/2000/svg"
+    <svg class="w-16 h-16 sm:w-24 sm:h-24 absolute bottom-4 sm:bottom-10 left-4 sm:left-10" xmlns="http://www.w3.org/2000/svg"
          width="96" height="96"
          viewBox="0 0 96 96" fill="none">
         <g clip-path="url(#clip0_440_317)">
@@ -541,7 +541,7 @@ get_header();
                     <p class="font-semibold"><?= get_option("numero_telephone") ?></p>
                 </a>
 
-                <a href="tel:<?= get_option("email_contact") ?>" class="flex gap-4 items-center">
+                <a href="mailto:<?= get_option("email_contact") ?>" class="flex gap-4 items-center">
                     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-[#D9D9D9]">
                         <svg class="w-4 h-auto" xmlns="http://www.w3.org/2000/svg" width="17" height="18"
                              viewBox="0 0 17 18" fill="none">

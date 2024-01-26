@@ -1194,6 +1194,9 @@ html {
 .h-\[55\%\]{
   height: 55%;
 }
+.h-\[50\%\]{
+  height: 50%;
+}
 .max-h-\[50vh\]{
   max-height: 50vh;
 }
@@ -1978,6 +1981,11 @@ footer .menu-menu-container ul li span {
 .hover\:opacity-90:hover{
   opacity: 0.9;
 }
+.hover\:before\:blur-\[6px\]:hover::before{
+  content: var(--tw-content);
+  --tw-blur: blur(6px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 @media (min-width: 640px){
   .sm\:bottom-10{
     bottom: 2.5rem;
@@ -2044,6 +2052,9 @@ footer .menu-menu-container ul li span {
   .sm\:h-\[75svh\]{
     height: 75svh;
   }
+  .sm\:h-24{
+    height: 6rem;
+  }
   .sm\:min-h-\[66vh\]{
     min-height: 66vh;
   }
@@ -2062,6 +2073,9 @@ footer .menu-menu-container ul li span {
   }
   .sm\:w-3\/4{
     width: 75%;
+  }
+  .sm\:w-24{
+    width: 6rem;
   }
   .sm\:-translate-x-1\/2{
     --tw-translate-x: -50%;
