@@ -65,7 +65,7 @@ get_header();
             foreach ($images_slider_hero as $index_image_slider_hero => $image_slider_hero) {
                 ?>
                 <img class="image-slider-hero <?= $index_image_slider_hero === 0 ? "active" : "hidden" ?> object-cover object-center min-h-full min-w-full"
-                     src="<?= $image_slider_hero["sizes"]["large"] ?>"
+                     src="<?= $image_slider_hero["url"] ?>"
                      alt="<?= $image_slider_hero["alt"] ?>">
                 <?php
             }
@@ -83,7 +83,7 @@ get_header();
             </div>
         </div>
     </div>
-    <svg class="w-16 h-16 sm:w-24 sm:h-24 absolute bottom-4 sm:bottom-10 left-4 sm:left-10" xmlns="http://www.w3.org/2000/svg"
+    <svg class="w-8 h-8 sm:w-24 sm:h-24 absolute bottom-4 sm:bottom-10 left-4 sm:left-10" xmlns="http://www.w3.org/2000/svg"
          width="96" height="96"
          viewBox="0 0 96 96" fill="none">
         <g clip-path="url(#clip0_440_317)">
@@ -269,7 +269,7 @@ get_header();
 
                     <a href="<?= get_permalink($projet_slider_home->ID) ?>" class="swiper-slide">
                         <img class="rounded-xl sm:rounded-3xl"
-                             src="<?= get_field("image_miniature", $projet_slider_home->ID)["url"] ?>"
+                             src="<?= get_field("image_miniature", $projet_slider_home->ID)["sizes"]["large"] ?>"
                              alt="<?= get_field("image_miniature", $projet_slider_home->ID)["alt"] ?>">
                         <h3 class="mt-4 text-center text-lg font-semibold uppercase"><?= get_the_title($projet_slider_home->ID) ?></h3>
                         <p class="text-center text-sm italic"><?= get_field("type", $projet_slider_home->ID) ?>

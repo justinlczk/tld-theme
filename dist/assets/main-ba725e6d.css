@@ -1176,6 +1176,9 @@ html {
 .h-svh{
   height: 100svh;
 }
+.h-8{
+  height: 2rem;
+}
 .max-h-\[25vh\]{
   max-height: 25vh;
 }
