@@ -10,7 +10,7 @@
 <body <?php body_class('flex flex-col h-screen bg-[#E5E5E5]') ?>>
 <?php wp_body_open(); ?>
 
-    <header class="h-16 flex-0 bg-transparent fixed top-0 left-0 w-screen z-50">
+    <header class="h-16 flex-0 bg-[#E5E5E53B] backdrop-blur-md fixed top-0 left-0 w-screen z-50">
         <div class="container mx-auto flex sm:grid sm:grid-cols-[1fr,3fr,1fr] items-center justify-between sm:justify-center min-h-[40px] px-4 sm:px-0">
             <div class="w-16">
                 <a href="<?php echo home_url() ?>"><img class="w-full" src="<?= get_option("logo_site") ?>" alt="Logo du site"></a>
